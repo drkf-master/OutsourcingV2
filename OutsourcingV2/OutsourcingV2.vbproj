@@ -61,8 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="Formularios\" />
-    <Folder Include="Imagenes\" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -88,9 +86,40 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Formularios\LoginGeneral.aspx" />
+    <Content Include="Imagenes\botones\botonazuloscuro.png" />
+    <Content Include="Imagenes\botones\botonazuloscuro1.png" />
+    <Content Include="Imagenes\botones\botonAzulPlan.PNG" />
+    <Content Include="Imagenes\botones\editar.gif" />
+    <Content Include="Imagenes\botones\eliminar.gif" />
+    <Content Include="Imagenes\encabezado\BARRA.jpg" />
+    <Content Include="Imagenes\encabezado\centro1.jpg" />
+    <Content Include="Imagenes\encabezado\ENABEZADOUNAM.jpg" />
+    <Content Include="Imagenes\encabezado\ENCABEZADODERECHO.jpg" />
+    <Content Include="Imagenes\encabezado\fondo1.gif" />
+    <Content Include="Imagenes\encabezado\franjaunam.gif" />
+    <Content Include="Imagenes\encabezado\pie.jpg" />
+    <Content Include="Imagenes\encabezado\TITULO.gif" />
+    <Content Include="Imagenes\encabezado\tituloSistemaazul1.gif" />
+    <Content Include="Imagenes\encabezado\tituloSistemaazul2.gif" />
+    <Content Include="Imagenes\FondoBody.png" />
+    <Content Include="Imagenes\fondopie.gif" />
+    <Content Include="Imagenes\franjaunam.gif" />
+    <Content Include="Imagenes\Mensaje_Tooltip.png" />
+    <Content Include="Imagenes\menu\fondocalipso.gif" />
+    <Content Include="Imagenes\panel\collapse.jpg" />
+    <Content Include="Imagenes\panel\expand.jpg" />
+    <Content Include="Imagenes\pie.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\LoginGeneral.aspx.designer.vb">
+      <DependentUpon>LoginGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\LoginGeneral.aspx.vb">
+      <DependentUpon>LoginGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -127,6 +156,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagenes\botones\vssver2.scc" />
+    <Content Include="Imagenes\encabezado\vssver2.scc" />
+    <Content Include="Imagenes\menu\vssver2.scc" />
+    <Content Include="Imagenes\panel\vssver2.scc" />
+    <Content Include="Imagenes\vssver2.scc" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
