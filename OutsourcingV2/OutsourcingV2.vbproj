@@ -61,9 +61,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Code\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
@@ -94,6 +92,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Formularios\AltaServicio.aspx" />
     <Content Include="Formularios\LoginGeneral.aspx" />
     <Content Include="Imagenes\botones\botonazuloscuro.png" />
     <Content Include="Imagenes\botones\botonazuloscuro1.png" />
@@ -157,6 +156,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\AltaServicio.aspx.designer.vb">
+      <DependentUpon>AltaServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AltaServicio.aspx.vb">
+      <DependentUpon>AltaServicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Formularios\LoginGeneral.aspx.designer.vb">
       <DependentUpon>LoginGeneral.aspx</DependentUpon>
     </Compile>
@@ -190,6 +196,7 @@
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="App_Code\Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
