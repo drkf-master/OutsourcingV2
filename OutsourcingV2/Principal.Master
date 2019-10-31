@@ -14,7 +14,7 @@
 <body>
     <form id="form1" runat="server">
 		<header>
-			<h1>HEADER DE PRUEBA </h1>
+			<h1>HEADER DE PRUEBA 2 </h1>
 		</header>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
