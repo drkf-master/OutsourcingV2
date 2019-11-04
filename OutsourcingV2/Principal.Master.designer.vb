@@ -32,6 +32,24 @@ Partial Public Class Principal
 	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
 	'''<summary>
+	'''Control ImagenUnam.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents ImagenUnam As Global.System.Web.UI.WebControls.Image
+
+	'''<summary>
+	'''Control ImagenAcatlan.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents ImagenAcatlan As Global.System.Web.UI.WebControls.Image
+
+	'''<summary>
 	'''Control ContentPlaceHolder1.
 	'''</summary>
 	'''<remarks>
@@ -39,4 +57,13 @@ Partial Public Class Principal
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
 	Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+
+	'''<summary>
+	'''Control ImgNavegador.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents ImgNavegador As Global.System.Web.UI.WebControls.Image
 End Class

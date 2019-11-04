@@ -8,16 +8,15 @@
         </head>
     
     <body>
-        
-        <header> 
+       
         <h1>Alta Proyecto</h1>
-        </header>
+     
         
         <section>
             
-        <header>
+       
         <h2>Datos del servicio</h2>
-        </header>
+        
    
             <form action="." oninput="range_control_value.value = range_control.valueAsNumber">
             <p>

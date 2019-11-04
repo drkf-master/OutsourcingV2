@@ -7,21 +7,50 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Outsourcingv2</title>
 	<link href="Content/bootstrap-reboot.min.css" rel="stylesheet" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
+	<link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
+	<link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+     <link href="css/CssPrincipal.css" rel="Stylesheet" type="text/css" />
+	<asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 
 <body>
     <form id="form1" runat="server">
 		<header>
-			<h1>HEADER DE PRUEBA 2 </h1>
+			<div id="fondos">
+				<table id="BannerCabecera">
+					<tr>
+						<td>
+							<a href="https://www.unam.mx/">
+								<asp:Image ID="ImagenUnam" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_unam.png" /></a>
+						</td>
+						<td>
+							LogoOutsourcing</td>
+						<td>
+							<a href="http://www.acatlan.unam.mx/">
+								<asp:Image ID="ImagenAcatlan" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_fes.png" /></a>
+						</td>
+					</tr>
+				</table>
+			</div>
 		</header>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-		<footer>
-			<h1>FOOTER DE PRUEBA </h1>
+		<footer class="align-content-center">
+			 <div class="align-content-center" id="PiePagina">
+				Hecho en México, todos los derechos reservados 2019. Esta página funciona mejor
+				usando el navegador <b>Google Chrome</b>
+				<asp:Image ID="ImgNavegador" runat="server" ImageUrl="~/Imagenes/MasterPage/img_Google.jpg"
+					Height="15px" Width="15px" />, puede ser reproducida con fines no lucrativos,
+				siempre y cuando no se mutile, se cite la fuente completa y su dirección electrónica.
+				De otra forma, requiere permiso previo por escrito de la institución.
+					Sitio web administrado por:
+					<br />
+					Departamento de Sistemas de Información, FES ACATLÁN.  
+			 </div>
 		</footer>
 		<script src="Scripts/jquery-3.0.0.min.js"></script>
 		<script src="Scripts/bootstrap.min.js"></script>

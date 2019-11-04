@@ -92,6 +92,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\CssPrincipal.css" />
     <Content Include="Formularios\AltaServicio.aspx" />
     <Content Include="Formularios\LoginGeneral.aspx" />
     <Content Include="Imagenes\botones\botonazuloscuro.png" />
@@ -112,8 +113,11 @@
     <Content Include="Imagenes\FondoBody.png" />
     <Content Include="Imagenes\fondopie.gif" />
     <Content Include="Imagenes\franjaunam.gif" />
+    <Content Include="Imagenes\MasterPage\fondo_azul.jpg" />
+    <Content Include="Imagenes\MasterPage\img_Google.jpg" />
+    <Content Include="Imagenes\MasterPage\logo_fes.png" />
+    <Content Include="Imagenes\MasterPage\logo_unam.png" />
     <Content Include="Imagenes\Mensaje_Tooltip.png" />
-    <Content Include="Imagenes\menu\fondocalipso.gif" />
     <Content Include="Imagenes\panel\collapse.jpg" />
     <Content Include="Imagenes\panel\expand.jpg" />
     <Content Include="Imagenes\pie.jpg" />
@@ -209,7 +213,6 @@
   <ItemGroup>
     <Content Include="Imagenes\botones\vssver2.scc" />
     <Content Include="Imagenes\encabezado\vssver2.scc" />
-    <Content Include="Imagenes\menu\vssver2.scc" />
     <Content Include="Imagenes\panel\vssver2.scc" />
     <Content Include="Imagenes\vssver2.scc" />
     <None Include="My Project\Application.myapp">
