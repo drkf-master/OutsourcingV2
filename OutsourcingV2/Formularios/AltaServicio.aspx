@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Principal.Master" CodeBehind="AltaServicio.aspx.vb" Inherits="OutsourcingV2.AltaServicio" %>
 <!DOCTYPE html>
-<html lang="es">
-    <head>
+    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <head>
          <meta charset="iso-8859-1">
          <meta name="description" content="Alta Proyecto" />
          <title>Alta Proyecto</title>    
-        </head>
+     </head>
     
     <body>
        
@@ -40,5 +40,5 @@
         
         
         </body>
+</asp:Content>
     
-    </html>
