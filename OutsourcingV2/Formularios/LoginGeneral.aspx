@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<h3 align="center"> inicio de sesión</h3>
+    <h3 align="center"> inicio de sesión</h3>
     <div align="center">
         <label for=" usuario"> usuario: </label>
         <br />

@@ -39,7 +39,7 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-		<footer class="align-content-center">
+		<footer class="align-content-center ">
 			 <div class="align-content-center" id="PiePagina">
 				Hecho en México, todos los derechos reservados 2019. Esta página funciona mejor
 				usando el navegador <b>Google Chrome</b>
@@ -51,6 +51,7 @@
 					<br />
 					Departamento de Sistemas de Información, FES ACATLÁN.  
 			 </div>
+             
 		</footer>
 		<script src="Scripts/jquery-3.0.0.min.js"></script>
 		<script src="Scripts/bootstrap.min.js"></script>
