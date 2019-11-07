@@ -105,6 +105,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\CssPrincipal.css" />
     <Content Include="Formularios\AltaServicio.aspx" />
+    <Content Include="Formularios\CatatlogoServicos.aspx" />
     <Content Include="Formularios\LoginGeneral.aspx" />
     <Content Include="Imagenes\botones\botonazuloscuro.png" />
     <Content Include="Imagenes\botones\botonazuloscuro1.png" />
@@ -183,6 +184,13 @@
     </Compile>
     <Compile Include="Formularios\AltaServicio.aspx.vb">
       <DependentUpon>AltaServicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\CatatlogoServicos.aspx.designer.vb">
+      <DependentUpon>CatatlogoServicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CatatlogoServicos.aspx.vb">
+      <DependentUpon>CatatlogoServicos.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Formularios\LoginGeneral.aspx.designer.vb">
