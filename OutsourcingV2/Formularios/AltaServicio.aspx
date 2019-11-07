@@ -17,8 +17,8 @@
                  <br />
              <h2>Datos Servicio</h2>
                  <br />
-             <asp:Label ID="LblTiposervicio" runat="server" Text="Tipo serivicio"></asp:Label>
-           <asp:ListBox ID="listbxTipoServicio" runat="server"></asp:ListBox>
+             <asp:Label ID="LblTiposervicioProyecto" runat="server" Text="Tipo serivicio"></asp:Label>
+           <asp:ListBox ID="listbxTipoServicioProyecto" runat="server"></asp:ListBox>
 
              <br />
           <asp:Label ID="lblUsuarioObjetivo" runat="server" Text="objetivo del usuario"></asp:Label>
