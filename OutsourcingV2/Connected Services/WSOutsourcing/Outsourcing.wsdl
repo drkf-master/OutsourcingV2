@@ -1,0 +1,2052 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://132.248.180.207/wsfesaoutsorcing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://132.248.180.207/wsfesaoutsorcing" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://132.248.180.207/wsfesaoutsorcing">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaPersona">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRfc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHomoclaveRfc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApellidoPaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApellidoMaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTelefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCelular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCorreoElectronico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCalle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strColonia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaPersonaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertaPersonaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarPersonas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strApellidoPaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApellidoMaterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRfc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHomoclaveRfc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarPersonasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarPersonasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarColonia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCodigoPostal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarColoniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarColoniaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaNombrePersona">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRfc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHomoclaveRfc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaNombrePersonaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultaNombrePersonaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIdPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdPerfil" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdAdscripcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertaUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaUsuarioAplicacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdPerfil" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdAdscripcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaUsuarioAplicacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertaUsuarioAplicacionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdPerfil" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdAdscripcion" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActualizarUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EliminarUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDatosUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDatosUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarDatosUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarUsuarios">
+        <s:complexType />
+      </s:element>
+      <s:element name="ConsultarUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIdPersona" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaNombreUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUsuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaNombreUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaNombreUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaPerfiles">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultaPerfilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultaPerfilesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaAdscripcion">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultaAdscripcionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultaAdscripcionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaAdscripcionEhijas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaAdscripcionEhijasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaAdscripcionEhijasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIdProyecto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminarProyectoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="imgImagenInfraestructura" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdTipoServicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuariosMeta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNombreProyecto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoDescripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoObjetivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoInfraestructura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecursosHumanos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProyectoBeneficiosUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProyectoProductoFinalEsperado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoTiempoDuracion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdProyectoPosiblesLideres" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdAdscripcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMostrarCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoVisible" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertaProyectoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="imgImagenInfraestructura" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdTipoServicio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuariosMeta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNombreProyecto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoDescripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoObjetivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoInfraestructura" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecursosHumanos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProyectoBeneficiosUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProyectoProductoFinalEsperado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoTiempoDuracion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdProyectoPosiblesLideres" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdAdscripcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMostrarCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProyectoVisible" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modificaProyectoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaSiguienteEstatusProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intIdProyecto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdEstatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strComentarioProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaSiguienteEstatusProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertaSiguienteEstatusProyectoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaResumenUnidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id_Resumen" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdResumen" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaResumenUnidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminaResumenUnidadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaResumenUnidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id_Resumen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="intCostoIndirecto" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdResumen" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdProyecto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intUnidadBruta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intAportacion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intUnidad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificaResumenUnidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modificaResumenUnidadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaRegistroAnalisisCosto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idResumen" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminaRegistroAnalisisCostoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminaRegistroAnalisisCostoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaAnalisisCosto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRecurso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUnidadMedida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCantidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCostoUnitario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDistribuidoEntre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdProyecto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaAnalisisCostoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertaAnalisisCostoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaResumenUnidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intCostoIndirecto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="intUnidadBruta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="intAportacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="intUnidad" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdProyecto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertaResumenUnidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertaResumenUnidadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarComparacionPrecios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strNombreInstitucion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPrecioMercado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDiferenciacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdProyecto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarComparacionPreciosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarComparacionPreciosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarRegistroComparacionPrecios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strIdComparacionPrecios" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarRegistroComparacionPreciosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminarRegistroComparacionPreciosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strIdEstatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intIdUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarProyectoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaUsuarioMetaProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intIdProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaUsuarioMetaProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaUsuarioMetaProyectoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PosibleLiderProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intIdProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PosibleLiderProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PosibleLiderProyectoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDatosProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intIdProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDatosProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaDatosProyectoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarPuesto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intIdAdscripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarPuestoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarPuestoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarAnalisisCostos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intIdProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarAnalisisCostosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarAnalisisCostosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarResumenUnidadProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intIdProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarResumenUnidadProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarResumenUnidadProyectoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarUsuarioMeta">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultarUsuarioMetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarUsuarioMetaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarServicios">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultarServiciosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarServiciosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaEstatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultaEstatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultaEstatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaEstatusSiguiente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intIdProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaEstatusSiguienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultaEstatusSiguienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarProyectosRevision">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strIdAdscripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIdTipoServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIdUsuarioMeta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIdEstatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarProyectosRevisionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarProyectosRevisionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarProyectoCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strIdTipoServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIdUsuarioMeta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarProyectoClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarProyectoClienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDatosProyectoCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intIdProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDatosProyectoClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaDatosProyectoClienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarComparacionPreciosProyecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="intIdProyecto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarComparacionPreciosProyectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarComparacionPreciosProyectoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaPersonaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaPersona" />
+  </wsdl:message>
+  <wsdl:message name="insertaPersonaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarPersonasSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarPersonas" />
+  </wsdl:message>
+  <wsdl:message name="consultarPersonasSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarPersonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarColoniaSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarColonia" />
+  </wsdl:message>
+  <wsdl:message name="consultarColoniaSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarColoniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaNombrePersonaSoapIn">
+    <wsdl:part name="parameters" element="tns:consultaNombrePersona" />
+  </wsdl:message>
+  <wsdl:message name="consultaNombrePersonaSoapOut">
+    <wsdl:part name="parameters" element="tns:consultaNombrePersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="insertaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaUsuarioAplicacionSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaUsuarioAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="insertaUsuarioAplicacionSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaUsuarioAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="EliminarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDatosUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarDatosUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDatosUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarDatosUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ValidarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="BuscaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaNombreUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaNombreUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaNombreUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaNombreUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaPerfilesSoapIn">
+    <wsdl:part name="parameters" element="tns:consultaPerfiles" />
+  </wsdl:message>
+  <wsdl:message name="consultaPerfilesSoapOut">
+    <wsdl:part name="parameters" element="tns:consultaPerfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaAdscripcionSoapIn">
+    <wsdl:part name="parameters" element="tns:consultaAdscripcion" />
+  </wsdl:message>
+  <wsdl:message name="consultaAdscripcionSoapOut">
+    <wsdl:part name="parameters" element="tns:consultaAdscripcionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaAdscripcionEhijasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaAdscripcionEhijas" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaAdscripcionEhijasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaAdscripcionEhijasResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarProyecto" />
+  </wsdl:message>
+  <wsdl:message name="eliminarProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarProyectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaProyecto" />
+  </wsdl:message>
+  <wsdl:message name="insertaProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaProyectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaProyecto" />
+  </wsdl:message>
+  <wsdl:message name="modificaProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaProyectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaSiguienteEstatusProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaSiguienteEstatusProyecto" />
+  </wsdl:message>
+  <wsdl:message name="insertaSiguienteEstatusProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaSiguienteEstatusProyectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaResumenUnidadSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaResumenUnidad" />
+  </wsdl:message>
+  <wsdl:message name="eliminaResumenUnidadSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaResumenUnidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificaResumenUnidadSoapIn">
+    <wsdl:part name="parameters" element="tns:modificaResumenUnidad" />
+  </wsdl:message>
+  <wsdl:message name="modificaResumenUnidadSoapOut">
+    <wsdl:part name="parameters" element="tns:modificaResumenUnidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminaRegistroAnalisisCostoSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminaRegistroAnalisisCosto" />
+  </wsdl:message>
+  <wsdl:message name="eliminaRegistroAnalisisCostoSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminaRegistroAnalisisCostoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaAnalisisCostoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaAnalisisCosto" />
+  </wsdl:message>
+  <wsdl:message name="InsertaAnalisisCostoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaAnalisisCostoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertaResumenUnidadSoapIn">
+    <wsdl:part name="parameters" element="tns:insertaResumenUnidad" />
+  </wsdl:message>
+  <wsdl:message name="insertaResumenUnidadSoapOut">
+    <wsdl:part name="parameters" element="tns:insertaResumenUnidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarComparacionPreciosSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarComparacionPrecios" />
+  </wsdl:message>
+  <wsdl:message name="InsertarComparacionPreciosSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarComparacionPreciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarRegistroComparacionPreciosSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarRegistroComparacionPrecios" />
+  </wsdl:message>
+  <wsdl:message name="eliminarRegistroComparacionPreciosSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarRegistroComparacionPreciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarProyecto" />
+  </wsdl:message>
+  <wsdl:message name="consultarProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarProyectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaUsuarioMetaProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaUsuarioMetaProyecto" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaUsuarioMetaProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaUsuarioMetaProyectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="PosibleLiderProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:PosibleLiderProyecto" />
+  </wsdl:message>
+  <wsdl:message name="PosibleLiderProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:PosibleLiderProyectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosProyecto" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosProyectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarPuestoSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarPuesto" />
+  </wsdl:message>
+  <wsdl:message name="consultarPuestoSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarPuestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarAnalisisCostosSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarAnalisisCostos" />
+  </wsdl:message>
+  <wsdl:message name="consultarAnalisisCostosSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarAnalisisCostosResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarResumenUnidadProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarResumenUnidadProyecto" />
+  </wsdl:message>
+  <wsdl:message name="consultarResumenUnidadProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarResumenUnidadProyectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarUsuarioMetaSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarUsuarioMeta" />
+  </wsdl:message>
+  <wsdl:message name="consultarUsuarioMetaSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarUsuarioMetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarServiciosSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarServicios" />
+  </wsdl:message>
+  <wsdl:message name="consultarServiciosSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaEstatusSoapIn">
+    <wsdl:part name="parameters" element="tns:consultaEstatus" />
+  </wsdl:message>
+  <wsdl:message name="consultaEstatusSoapOut">
+    <wsdl:part name="parameters" element="tns:consultaEstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaEstatusSiguienteSoapIn">
+    <wsdl:part name="parameters" element="tns:consultaEstatusSiguiente" />
+  </wsdl:message>
+  <wsdl:message name="consultaEstatusSiguienteSoapOut">
+    <wsdl:part name="parameters" element="tns:consultaEstatusSiguienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarProyectosRevisionSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarProyectosRevision" />
+  </wsdl:message>
+  <wsdl:message name="consultarProyectosRevisionSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarProyectosRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarProyectoClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarProyectoCliente" />
+  </wsdl:message>
+  <wsdl:message name="consultarProyectoClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarProyectoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosProyectoClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosProyectoCliente" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosProyectoClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosProyectoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarComparacionPreciosProyectoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarComparacionPreciosProyecto" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarComparacionPreciosProyectoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarComparacionPreciosProyectoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OutsourcingSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaPersona">
+      <wsdl:input message="tns:insertaPersonaSoapIn" />
+      <wsdl:output message="tns:insertaPersonaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarPersonas">
+      <wsdl:input message="tns:consultarPersonasSoapIn" />
+      <wsdl:output message="tns:consultarPersonasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarColonia">
+      <wsdl:input message="tns:consultarColoniaSoapIn" />
+      <wsdl:output message="tns:consultarColoniaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaNombrePersona">
+      <wsdl:input message="tns:consultaNombrePersonaSoapIn" />
+      <wsdl:output message="tns:consultaNombrePersonaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaUsuario">
+      <wsdl:input message="tns:insertaUsuarioSoapIn" />
+      <wsdl:output message="tns:insertaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaUsuarioAplicacion">
+      <wsdl:input message="tns:insertaUsuarioAplicacionSoapIn" />
+      <wsdl:output message="tns:insertaUsuarioAplicacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <wsdl:input message="tns:ActualizarUsuarioSoapIn" />
+      <wsdl:output message="tns:ActualizarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <wsdl:input message="tns:EliminarUsuarioSoapIn" />
+      <wsdl:output message="tns:EliminarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDatosUsuario">
+      <wsdl:input message="tns:ConsultarDatosUsuarioSoapIn" />
+      <wsdl:output message="tns:ConsultarDatosUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarios">
+      <wsdl:input message="tns:ConsultarUsuariosSoapIn" />
+      <wsdl:output message="tns:ConsultarUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <wsdl:input message="tns:ValidarUsuarioSoapIn" />
+      <wsdl:output message="tns:ValidarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaUsuario">
+      <wsdl:input message="tns:BuscaUsuarioSoapIn" />
+      <wsdl:output message="tns:BuscaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaNombreUsuario">
+      <wsdl:input message="tns:ConsultaNombreUsuarioSoapIn" />
+      <wsdl:output message="tns:ConsultaNombreUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaPerfiles">
+      <wsdl:input message="tns:consultaPerfilesSoapIn" />
+      <wsdl:output message="tns:consultaPerfilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaAdscripcion">
+      <wsdl:input message="tns:consultaAdscripcionSoapIn" />
+      <wsdl:output message="tns:consultaAdscripcionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaAdscripcionEhijas">
+      <wsdl:input message="tns:ConsultaAdscripcionEhijasSoapIn" />
+      <wsdl:output message="tns:ConsultaAdscripcionEhijasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarProyecto">
+      <wsdl:input message="tns:eliminarProyectoSoapIn" />
+      <wsdl:output message="tns:eliminarProyectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaProyecto">
+      <wsdl:input message="tns:insertaProyectoSoapIn" />
+      <wsdl:output message="tns:insertaProyectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaProyecto">
+      <wsdl:input message="tns:modificaProyectoSoapIn" />
+      <wsdl:output message="tns:modificaProyectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaSiguienteEstatusProyecto">
+      <wsdl:input message="tns:insertaSiguienteEstatusProyectoSoapIn" />
+      <wsdl:output message="tns:insertaSiguienteEstatusProyectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaResumenUnidad">
+      <wsdl:input message="tns:eliminaResumenUnidadSoapIn" />
+      <wsdl:output message="tns:eliminaResumenUnidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificaResumenUnidad">
+      <wsdl:input message="tns:modificaResumenUnidadSoapIn" />
+      <wsdl:output message="tns:modificaResumenUnidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminaRegistroAnalisisCosto">
+      <wsdl:input message="tns:eliminaRegistroAnalisisCostoSoapIn" />
+      <wsdl:output message="tns:eliminaRegistroAnalisisCostoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaAnalisisCosto">
+      <wsdl:input message="tns:InsertaAnalisisCostoSoapIn" />
+      <wsdl:output message="tns:InsertaAnalisisCostoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertaResumenUnidad">
+      <wsdl:input message="tns:insertaResumenUnidadSoapIn" />
+      <wsdl:output message="tns:insertaResumenUnidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarComparacionPrecios">
+      <wsdl:input message="tns:InsertarComparacionPreciosSoapIn" />
+      <wsdl:output message="tns:InsertarComparacionPreciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarRegistroComparacionPrecios">
+      <wsdl:input message="tns:eliminarRegistroComparacionPreciosSoapIn" />
+      <wsdl:output message="tns:eliminarRegistroComparacionPreciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarProyecto">
+      <wsdl:input message="tns:consultarProyectoSoapIn" />
+      <wsdl:output message="tns:consultarProyectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaUsuarioMetaProyecto">
+      <wsdl:input message="tns:ConsultaUsuarioMetaProyectoSoapIn" />
+      <wsdl:output message="tns:ConsultaUsuarioMetaProyectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PosibleLiderProyecto">
+      <wsdl:input message="tns:PosibleLiderProyectoSoapIn" />
+      <wsdl:output message="tns:PosibleLiderProyectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosProyecto">
+      <wsdl:input message="tns:ConsultaDatosProyectoSoapIn" />
+      <wsdl:output message="tns:ConsultaDatosProyectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarPuesto">
+      <wsdl:input message="tns:consultarPuestoSoapIn" />
+      <wsdl:output message="tns:consultarPuestoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarAnalisisCostos">
+      <wsdl:input message="tns:consultarAnalisisCostosSoapIn" />
+      <wsdl:output message="tns:consultarAnalisisCostosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarResumenUnidadProyecto">
+      <wsdl:input message="tns:consultarResumenUnidadProyectoSoapIn" />
+      <wsdl:output message="tns:consultarResumenUnidadProyectoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarUsuarioMeta">
+      <wsdl:input message="tns:consultarUsuarioMetaSoapIn" />
+      <wsdl:output message="tns:consultarUsuarioMetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarServicios">
+      <wsdl:input message="tns:consultarServiciosSoapIn" />
+      <wsdl:output message="tns:consultarServiciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstatus">
+      <wsdl:input message="tns:consultaEstatusSoapIn" />
+      <wsdl:output message="tns:consultaEstatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstatusSiguiente">
+      <wsdl:input message="tns:consultaEstatusSiguienteSoapIn" />
+      <wsdl:output message="tns:consultaEstatusSiguienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarProyectosRevision">
+      <wsdl:input message="tns:consultarProyectosRevisionSoapIn" />
+      <wsdl:output message="tns:consultarProyectosRevisionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarProyectoCliente">
+      <wsdl:input message="tns:consultarProyectoClienteSoapIn" />
+      <wsdl:output message="tns:consultarProyectoClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosProyectoCliente">
+      <wsdl:input message="tns:ConsultaDatosProyectoClienteSoapIn" />
+      <wsdl:output message="tns:ConsultaDatosProyectoClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComparacionPreciosProyecto">
+      <wsdl:input message="tns:ConsultarComparacionPreciosProyectoSoapIn" />
+      <wsdl:output message="tns:ConsultarComparacionPreciosProyectoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OutsourcingSoap" type="tns:OutsourcingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaPersona">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPersonas">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarPersonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarColonia">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarColonia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaNombrePersona">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaNombrePersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaUsuario">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaUsuarioAplicacion">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaUsuarioAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDatosUsuario">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultarDatosUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarios">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaUsuario">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/BuscaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaNombreUsuario">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaNombreUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaPerfiles">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaPerfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaAdscripcion">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaAdscripcion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaAdscripcionEhijas">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaAdscripcionEhijas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/eliminarProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/modificaProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaSiguienteEstatusProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaSiguienteEstatusProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaResumenUnidad">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/eliminaResumenUnidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaResumenUnidad">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/modificaResumenUnidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaRegistroAnalisisCosto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/eliminaRegistroAnalisisCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaAnalisisCosto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/InsertaAnalisisCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaResumenUnidad">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaResumenUnidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarComparacionPrecios">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/InsertarComparacionPrecios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarRegistroComparacionPrecios">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/eliminarRegistroComparacionPrecios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaUsuarioMetaProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaUsuarioMetaProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PosibleLiderProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/PosibleLiderProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaDatosProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPuesto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarPuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarAnalisisCostos">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarAnalisisCostos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarResumenUnidadProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarResumenUnidadProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarUsuarioMeta">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarUsuarioMeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarServicios">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstatus">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaEstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstatusSiguiente">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaEstatusSiguiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarProyectosRevision">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarProyectosRevision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarProyectoCliente">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarProyectoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosProyectoCliente">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaDatosProyectoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComparacionPreciosProyecto">
+      <soap:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultarComparacionPreciosProyecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OutsourcingSoap12" type="tns:OutsourcingSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaPersona">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPersonas">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarPersonas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarColonia">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarColonia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaNombrePersona">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaNombrePersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaUsuario">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaUsuarioAplicacion">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaUsuarioAplicacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDatosUsuario">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultarDatosUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarios">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultarUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaUsuario">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/BuscaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaNombreUsuario">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaNombreUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaPerfiles">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaPerfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaAdscripcion">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaAdscripcion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaAdscripcionEhijas">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaAdscripcionEhijas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/eliminarProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/modificaProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaSiguienteEstatusProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaSiguienteEstatusProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaResumenUnidad">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/eliminaResumenUnidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificaResumenUnidad">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/modificaResumenUnidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminaRegistroAnalisisCosto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/eliminaRegistroAnalisisCosto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaAnalisisCosto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/InsertaAnalisisCosto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertaResumenUnidad">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/insertaResumenUnidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarComparacionPrecios">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/InsertarComparacionPrecios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarRegistroComparacionPrecios">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/eliminarRegistroComparacionPrecios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaUsuarioMetaProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaUsuarioMetaProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PosibleLiderProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/PosibleLiderProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaDatosProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPuesto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarPuesto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarAnalisisCostos">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarAnalisisCostos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarResumenUnidadProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarResumenUnidadProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarUsuarioMeta">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarUsuarioMeta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarServicios">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarServicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstatus">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaEstatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEstatusSiguiente">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultaEstatusSiguiente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarProyectosRevision">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarProyectosRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarProyectoCliente">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/consultarProyectoCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosProyectoCliente">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultaDatosProyectoCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComparacionPreciosProyecto">
+      <soap12:operation soapAction="http://132.248.180.207/wsfesaoutsorcing/ConsultarComparacionPreciosProyecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Outsourcing">
+    <wsdl:port name="OutsourcingSoap" binding="tns:OutsourcingSoap">
+      <soap:address location="http://132.248.180.207/wsfesaoutsorcing/Outsourcing.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OutsourcingSoap12" binding="tns:OutsourcingSoap12">
+      <soap12:address location="http://132.248.180.207/wsfesaoutsorcing/Outsourcing.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
