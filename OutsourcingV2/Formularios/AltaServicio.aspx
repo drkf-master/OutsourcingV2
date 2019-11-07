@@ -39,8 +39,8 @@
            
 
 
-            <asp:Label ID="lblDescripcion" runat="server" Text="Descripción"></asp:Label>
-            <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
+            <asp:Label ID="lblDescripcionProyecto" runat="server" Text="Descripción"></asp:Label>
+            <asp:TextBox ID="txtDescripcionProyecto" runat="server"></asp:TextBox>
             <br />
             
             <asp:Label ID="lblObjetivo" runat="server" Text="Objetivo"></asp:Label>
