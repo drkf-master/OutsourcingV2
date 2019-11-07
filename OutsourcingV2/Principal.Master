@@ -4,13 +4,15 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Outsourcingv2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maxium-scale=1.0, minium-scale=1.0" />
+    <title>OutsourcingV2</title>
 	<link href="Content/bootstrap-reboot.min.css" rel="stylesheet" />
 	<link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
 	<link href="Content/bootstrap.min.css" rel="stylesheet" />
-
-     <link href="css/CssPrincipal.css" rel="Stylesheet" type="text/css" />
+    <link href="Scripts/bootstrap.js" rel="stylesheet" />
+    
+    <link href="css/CssPrincipal.css" rel="Stylesheet" type="text/css" />
 	<asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -26,7 +28,9 @@
 								<asp:Image ID="ImagenUnam" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_unam.png" /></a>
 						</td>
 						<td>
-							LogoOutsourcing</td>
+							LogoOutsourcing
+
+						</td>
 						<td>
 							<a href="http://www.acatlan.unam.mx/">
 								<asp:Image ID="ImagenAcatlan" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_fes.png" /></a>
