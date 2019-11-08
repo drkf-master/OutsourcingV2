@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3 align="center"> SERVICIOS PROPORCIONADOS POR ACÁTLAN</h3>
+    <h3 class="center"> SERVICIOS PROPORCIONADOS POR ACÁTLAN</h3>
         <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
     </asp:Content>
 

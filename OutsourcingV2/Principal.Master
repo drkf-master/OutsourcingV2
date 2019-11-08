@@ -7,11 +7,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maxium-scale=1.0, minium-scale=1.0" />
     <title>OutsourcingV2</title>
-	<link href="Content/bootstrap-reboot.min.css" rel="stylesheet" />
-	<link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
 	<link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Scripts/bootstrap.js" rel="stylesheet" />
-    
+	<script src="Scripts/jquery-3.0.0.min.js"></script>
+	<script src="Scripts/bootstrap.min.js"></script>
+	<script src="Scripts/popper.min.js"></script>
     <link href="css/CssPrincipal.css" rel="Stylesheet" type="text/css" />
 	<asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -43,7 +42,7 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-		<footer class="align-content-center ">
+		<footer class="align-content-center  blockquote-footer">
 			 <div class="align-content-center" id="PiePagina">
 				Hecho en México, todos los derechos reservados 2019. Esta página funciona mejor
 				usando el navegador <b>Google Chrome</b>
@@ -57,6 +56,7 @@
 			 </div>
              
 		</footer>
+
 		<script src="Scripts/jquery-3.0.0.min.js"></script>
 		<script src="Scripts/bootstrap.min.js"></script>
     </form>

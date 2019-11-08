@@ -110,6 +110,7 @@
     <Content Include="Formularios\CatatlogoServicos.aspx" />
     <Content Include="Formularios\LoginGeneral.aspx" />
     <Content Include="Formularios\ModificarServicio.aspx" />
+    <Content Include="Formularios\Pruebas.aspx" />
     <Content Include="Imagenes\botones\botonazuloscuro.png" />
     <Content Include="Imagenes\botones\botonazuloscuro1.png" />
     <Content Include="Imagenes\botones\botonAzulPlan.PNG" />
@@ -223,6 +224,13 @@
     </Compile>
     <Compile Include="Formularios\ModificarServicio.aspx.vb">
       <DependentUpon>ModificarServicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pruebas.aspx.designer.vb">
+      <DependentUpon>Pruebas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pruebas.aspx.vb">
+      <DependentUpon>Pruebas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
