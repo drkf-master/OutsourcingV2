@@ -98,6 +98,7 @@
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
     <Content Include="Administrador\AltaUsuario.aspx" />
+    <Content Include="Administrador\EditarUsuario.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -108,6 +109,7 @@
     <Content Include="Formularios\AltaServicio.aspx" />
     <Content Include="Formularios\CatatlogoServicos.aspx" />
     <Content Include="Formularios\LoginGeneral.aspx" />
+    <Content Include="Formularios\ModificarServicio.aspx" />
     <Content Include="Imagenes\botones\botonazuloscuro.png" />
     <Content Include="Imagenes\botones\botonazuloscuro1.png" />
     <Content Include="Imagenes\botones\botonAzulPlan.PNG" />
@@ -172,6 +174,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Verificador\RevisarServicios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +183,13 @@
     </Compile>
     <Compile Include="Administrador\AltaUsuario.aspx.vb">
       <DependentUpon>AltaUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\EditarUsuario.aspx.designer.vb">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\EditarUsuario.aspx.vb">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Connected Services\WSOutsourcing\Reference.vb">
@@ -206,6 +216,13 @@
     </Compile>
     <Compile Include="Formularios\LoginGeneral.aspx.vb">
       <DependentUpon>LoginGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\ModificarServicio.aspx.designer.vb">
+      <DependentUpon>ModificarServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ModificarServicio.aspx.vb">
+      <DependentUpon>ModificarServicio.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -235,6 +252,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Code\Usuario.vb" />
+    <Compile Include="Verificador\RevisarServicios.aspx.designer.vb">
+      <DependentUpon>RevisarServicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Verificador\RevisarServicios.aspx.vb">
+      <DependentUpon>RevisarServicios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -286,6 +310,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\WSOutsourcing\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

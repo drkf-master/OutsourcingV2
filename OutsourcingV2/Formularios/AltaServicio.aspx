@@ -15,18 +15,20 @@
             <asp:Button ID="btnGuardarCambios" runat="server" Text="Guardar cambios" />
            <asp:Button ID="btnCancelarCambios" runat="server" Text="Cancelar cambios" />
                  <br />
-             <h2>Datos Servicio</h2>
+           Datos Servicio</h2>
                  <br />
              <asp:Label ID="LblTiposervicioProyecto" runat="server" Text="Tipo serivicio"></asp:Label>
-           <asp:ListBox ID="listbxTipoServicioProyecto" runat="server"></asp:ListBox>
+           	  <asp:DropDownList ID="DropDownList1" runat="server">
+				 </asp:DropDownList>
 
              <br />
           <asp:Label ID="lblUsuarioObjetivo" runat="server" Text="objetivo del usuario"></asp:Label>
-           <asp:ListBox ID="listbxUsuarioObjetivo" runat="server"></asp:ListBox>
+           	  <asp:DropDownList ID="DropDownList2" runat="server">
+				 </asp:DropDownList>
 
              <br />
 
-            <h2>Datos Proyecto</h2>
+            <h2>Datos Proyectooyecto</h2>
 
 
 
