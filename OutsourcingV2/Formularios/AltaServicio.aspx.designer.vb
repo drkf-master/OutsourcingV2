@@ -14,24 +14,6 @@ Option Explicit On
 Partial Public Class AltaServicio
 
 	'''<summary>
-	'''Control btnGuardarCambios.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents btnGuardarCambios As Global.System.Web.UI.WebControls.Button
-
-	'''<summary>
-	'''Control btnCancelarCambios.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents btnCancelarCambios As Global.System.Web.UI.WebControls.Button
-
-	'''<summary>
 	'''Control LblTiposervicioProyecto.
 	'''</summary>
 	'''<remarks>
@@ -228,4 +210,22 @@ Partial Public Class AltaServicio
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
 	Protected WithEvents btnCancelarProyecto As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''Control btnGuardarCambios.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents btnGuardarCambios As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''Control btnCancelarCambios.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents btnCancelarCambios As Global.System.Web.UI.WebControls.Button
 End Class
