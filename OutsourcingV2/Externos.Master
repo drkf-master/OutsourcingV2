@@ -1,10 +1,11 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Principal.master.vb" Inherits="OutsourcingV2.Principal" %>
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Externos.master.vb" Inherits="OutsourcingV2.Externos" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maxium-scale=1.0, minium-scale=1.0" />
     <title>OutsourcingV2</title>
 	<link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -20,9 +21,8 @@
 	<asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-
 <body>
-    <form id="form1" runat="server">
+   <form id="form1" runat="server">
 		<header>
 			<div id="fondos">
 				<table id="BannerCabecera">
@@ -43,49 +43,7 @@
 				</table>
 			</div>
 		</header>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-gradient-ligth">
-  <a class="navbar-brand" href="../Formularios/CatalogoServicios.aspx">Outsourcing</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	<div class="container-fluid">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-       <a class="nav-link dropdown-toggle" href="·" id="MenuGestionUsuarios" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Gestion de Usuarios
-        </a>
-		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../Administrador/AltaUsuario.aspx">Alta de Usuarios</a>
-          <a class="dropdown-item" href="../Administrador/EditarUsuario.aspx">Modificar Usuarios</a>
-		</div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="MenuGestionProyectos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Gestion de Proyectos
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../Formularios/AltaServicio.aspx">Alta Proyectos</a>
-          <a class="dropdown-item" href="../Formularios/ModificarServicio.aspx">Modificar Proyectos</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="../Revisor/RevisarServicios.aspx" tabindex="-1" aria-disabled="true">Revisar Proyectos</a>
-      </li>
-    
-    </ul>
-		  <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> 
-		  Usuario:  <asp:Label ID="lblUsuario" runat="server" Text="MACA471122"></asp:Label>
-          </a></li>
-      <li><a href="../Formularios/LoginGeneral.aspx"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
-    </ul>
-  </div>
-	  </div>
-</nav>
-
+        
 		<div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

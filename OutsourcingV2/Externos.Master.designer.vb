@@ -11,59 +11,59 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class LoginGeneral
+Partial Public Class Externos
 
 	'''<summary>
-	'''Control txtNombreUsuario.
+	'''Control head.
 	'''</summary>
 	'''<remarks>
 	'''Campo generado automáticamente.
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
-	Protected WithEvents txtNombreUsuario As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
 	'''<summary>
-	'''Control reqNombreUsuario.
+	'''Control form1.
 	'''</summary>
 	'''<remarks>
 	'''Campo generado automáticamente.
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
-	Protected WithEvents reqNombreUsuario As Global.System.Web.UI.WebControls.RequiredFieldValidator
+	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
 	'''<summary>
-	'''Control txtPassword.
+	'''Control ImagenUnam.
 	'''</summary>
 	'''<remarks>
 	'''Campo generado automáticamente.
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
-	Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+	Protected WithEvents ImagenUnam As Global.System.Web.UI.WebControls.Image
 
 	'''<summary>
-	'''Control reqPassword.
+	'''Control ImagenAcatlan.
 	'''</summary>
 	'''<remarks>
 	'''Campo generado automáticamente.
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
-	Protected WithEvents reqPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
+	Protected WithEvents ImagenAcatlan As Global.System.Web.UI.WebControls.Image
 
 	'''<summary>
-	'''Control btnIngresar.
+	'''Control ContentPlaceHolder1.
 	'''</summary>
 	'''<remarks>
 	'''Campo generado automáticamente.
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
-	Protected WithEvents btnIngresar As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
 	'''<summary>
-	'''Control lblMensajeError.
+	'''Control ImgNavegador.
 	'''</summary>
 	'''<remarks>
 	'''Campo generado automáticamente.
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
-	Protected WithEvents lblMensajeError As Global.System.Web.UI.WebControls.Label
+	Protected WithEvents ImgNavegador As Global.System.Web.UI.WebControls.Image
 End Class

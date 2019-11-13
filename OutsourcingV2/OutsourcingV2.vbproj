@@ -107,9 +107,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\CssPrincipal.css" />
     <Content Include="Formularios\AltaServicio.aspx" />
-    <Content Include="Formularios\CatatlogoServicos.aspx" />
+    <Content Include="Formularios\CatalogoServicos.aspx" />
     <Content Include="Formularios\LoginGeneral.aspx" />
     <Content Include="Formularios\ModificarServicio.aspx" />
+    <Content Include="Formularios\PaginaPrincipal.aspx" />
     <Content Include="Formularios\Pruebas.aspx" />
     <Content Include="Imagenes\botones\botonazuloscuro.png" />
     <Content Include="Imagenes\botones\botonazuloscuro1.png" />
@@ -145,6 +146,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="My Project\DataSources\System.Data.DataSet.datasource" />
     <None Include="Connected Services\WSOutsourcing\Outsourcing.wsdl" />
+    <Content Include="Externos.Master" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -175,7 +177,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Verificador\RevisarServicios.aspx" />
+    <Content Include="Revisor\RevisarServicios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +200,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Externos.Master.designer.vb">
+      <DependentUpon>Externos.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Externos.Master.vb">
+      <DependentUpon>Externos.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Formularios\AltaServicio.aspx.designer.vb">
       <DependentUpon>AltaServicio.aspx</DependentUpon>
     </Compile>
@@ -205,11 +214,11 @@
       <DependentUpon>AltaServicio.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Formularios\CatatlogoServicos.aspx.designer.vb">
-      <DependentUpon>CatatlogoServicos.aspx</DependentUpon>
+    <Compile Include="Formularios\CatalogoServicos.aspx.designer.vb">
+      <DependentUpon>CatalogoServicos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\CatatlogoServicos.aspx.vb">
-      <DependentUpon>CatatlogoServicos.aspx</DependentUpon>
+    <Compile Include="Formularios\CatalogoServicos.aspx.vb">
+      <DependentUpon>CatalogoServicos.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Formularios\LoginGeneral.aspx.designer.vb">
@@ -224,6 +233,13 @@
     </Compile>
     <Compile Include="Formularios\ModificarServicio.aspx.vb">
       <DependentUpon>ModificarServicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\PaginaPrincipal.aspx.designer.vb">
+      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PaginaPrincipal.aspx.vb">
+      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Formularios\Pruebas.aspx.designer.vb">
@@ -260,10 +276,10 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Code\Usuario.vb" />
-    <Compile Include="Verificador\RevisarServicios.aspx.designer.vb">
+    <Compile Include="Revisor\RevisarServicios.aspx.designer.vb">
       <DependentUpon>RevisarServicios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Verificador\RevisarServicios.aspx.vb">
+    <Compile Include="Revisor\RevisarServicios.aspx.vb">
       <DependentUpon>RevisarServicios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
