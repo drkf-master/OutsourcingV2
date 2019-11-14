@@ -195,6 +195,7 @@
       <DependentUpon>EditarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Content Include="App_Code\MD5.vb" />
     <Compile Include="Connected Services\WSOutsourcing\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
