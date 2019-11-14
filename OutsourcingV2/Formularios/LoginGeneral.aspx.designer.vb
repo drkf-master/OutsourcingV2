@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class LoginGeneral
 
 	'''<summary>
+	'''Control lblUsuario.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents lblUsuario As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
 	'''Control txtNombreUsuario.
 	'''</summary>
 	'''<remarks>
@@ -30,6 +39,15 @@ Partial Public Class LoginGeneral
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
 	Protected WithEvents reqNombreUsuario As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+	'''<summary>
+	'''Control lblPassword.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents lblPassword As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
 	'''Control txtPassword.
