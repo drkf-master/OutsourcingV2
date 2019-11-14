@@ -2,7 +2,7 @@
 	Inherits System.Web.UI.Page
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+		llenaGridUsuarios()
 
 	End Sub
 
@@ -40,6 +40,24 @@
 			btnBuscarPersona.Text = "Nueva búsqueda"
 
 		End If
+	End Sub
+
+	Protected Sub llenaGridUsuarios()
+		Dim objOutsourcing As New WSOutsourcing.OutsourcingSoapClient
+		Try
+			Dim DSConsulta As Data.DataSet = objOutsourcing.ConsultarUsuarios()
+			If DSConsulta.Tables(0).Rows.Count > 0 Then
+				If IsNumeric(DSConsulta.Tables(0).Rows(0).Item(0).ToString) Then
+					grdUsuariosSistema.DataSource = DSConsulta
+					grdUsuariosSistema.DataBind()
+				Else
+					lblBuscarPersonaMensaje.Text = DSConsulta.Tables(0).Rows(0).Item(0).ToString
+					Exit Sub
+				End If
+			End If
+		Catch ex As Exception
+			lblBuscarPersonaMensaje.Text = "Error el cargar usuarios."
+		End Try
 	End Sub
 
 	Protected Sub LlenaListaAdscripcion()

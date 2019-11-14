@@ -111,7 +111,7 @@
 
 						<div class="tab-pane fade" id="navAgregarUsuario" role="tabpanel" aria-labelledby="nav-contact-tab">
 							<div class="label text-info">Agregar Usuario </div>
-			
+
 							<asp:Label ID="lblUsuario" runat="server" Text="Usuario"></asp:Label>
 							<asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox><br />
 							<br />
@@ -132,8 +132,11 @@
 							<asp:Button ID="btnCancelarAltaUsuario" runat="server" Text="cancelar" />
 						</div>
 
-					</div>
-					<div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+
+						<div class="tab-pane fade" id="navUsuarios" role="tabpanel" aria-labelledby="nav-about-tab">
+							<div class="label text-info">Usuarios del Sistema</div>
+							<asp:GridView ID="grdUsuariosSistema" runat="server" Class="table "> </asp:GridView>
+						</div>
 					</div>
 				</div>
 

@@ -363,4 +363,13 @@ Partial Public Class AltaUsuario
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
 	Protected WithEvents btnCancelarAltaUsuario As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''Control grdUsuariosSistema.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents grdUsuariosSistema As Global.System.Web.UI.WebControls.GridView
 End Class
