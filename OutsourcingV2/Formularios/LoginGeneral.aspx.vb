@@ -18,12 +18,10 @@
         If IsNumeric(strResultado) Then
             If CInt(strResultado) > 0 Then
 
-				'Dim dsConsultaUsuario As Data.DataSet = objOutsourcing.ConsultarDatosUsuario(strResultado)
+                'Dim dsConsultaUsuario As Data.DataSet = objOutsourcing.ConsultarDatosUsuario(strResultado)
 
-				'Dim dsConsultaServicios As Data.DataSet = objOutsourcing.consultarProyectosRevision(stridadscripcion, stridadscripcion, strmeta, strestatus)
 
-				'Dim dsEstatus As Data.DataSet = objOutsourcing.consultaEstatusSiguiente(stridservicio)
-				Response.Redirect("~/PaginaPrincipal.aspx")
+                Response.Redirect("PaginaPrincipal.aspx")
             Else
                 Me.lblMensajeError.Text = "El usuario no es válido. Inténtelo de nuevo."
             End If
