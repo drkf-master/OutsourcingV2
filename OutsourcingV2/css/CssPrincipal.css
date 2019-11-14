@@ -19,6 +19,7 @@
 #BannerCabecera {
 	text-align: center;
 	width: 100%;
+    display: inline-block;
 }
 
 #PiePagina {
@@ -36,4 +37,5 @@
     clear: both;
     vertical-align: bottom;
     z-index: 1;
+    display: inline-block;
 }

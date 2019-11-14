@@ -67,8 +67,8 @@
 						<asp:DropDownList ID="DropDownList3" runat="server"></asp:DropDownList><br /><br />
 						<label>Adscripción</label>
 						<asp:DropDownList ID="DropDownList4" runat="server"></asp:DropDownList><br /><br />
-						<asp:Button ID="Button2" runat="server" Text="Dar alta" /><br /><br />
-						<asp:Button ID="Button3" runat="server" Text="cancelar" />
+						<asp:Button ID="Button2" runat="server" Text="Dar alta" Width="150px" /><br /><br />
+						<asp:Button ID="Button3" runat="server" Text="cancelar" Width="150px" />
 						</div>
 
 					</div>
