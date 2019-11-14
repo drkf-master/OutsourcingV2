@@ -9,25 +9,21 @@
 
         ' este codigo solo es  prueba de los webservices 
         Dim objOutsourcing As New WSOutsourcing.OutsourcingSoapClient
-        Dim encripta As New MD5
-        Dim strResultado As String
-        Dim stridadscripcion As String
-        Dim stridservicio As String
-        Dim strmeta As String = "45"
-        Dim strestatus As String = "1"
-        Dim Usuario As String = Replace(Trim(txtNombreUsuario.Text), "'", "''")
-        Dim Password As String = encripta.calculaMD5(txtPassword.Text)
-        strResultado = objOutsourcing.ValidarUsuario(Usuario, Password)
+		Dim Encripta As New Usuario
+		Dim strResultado As String
+		Dim Usuario As String = Replace(Trim(txtNombreUsuario.Text), "'", "''")
+		Dim Password As String = Encripta.CalculaMD5(txtPassword.Text)
+		strResultado = objOutsourcing.ValidarUsuario(Usuario, Password)
 
         If IsNumeric(strResultado) Then
             If CInt(strResultado) > 0 Then
 
-                Dim dsConsultaUsuario As Data.DataSet = objOutsourcing.ConsultarDatosUsuario(strResultado)
+				'Dim dsConsultaUsuario As Data.DataSet = objOutsourcing.ConsultarDatosUsuario(strResultado)
 
-                Dim dsConsultaServicios As Data.DataSet = objOutsourcing.consultarProyectosRevision(stridadscripcion, stridadscripcion, strmeta, strestatus)
+				'Dim dsConsultaServicios As Data.DataSet = objOutsourcing.consultarProyectosRevision(stridadscripcion, stridadscripcion, strmeta, strestatus)
 
-                Dim dsEstatus As Data.DataSet = objOutsourcing.consultaEstatusSiguiente(stridservicio)
-                Response.Redirect("~/PaginaPrincipal.aspx")
+				'Dim dsEstatus As Data.DataSet = objOutsourcing.consultaEstatusSiguiente(stridservicio)
+				Response.Redirect("~/PaginaPrincipal.aspx")
             Else
                 Me.lblMensajeError.Text = "El usuario no es válido. Inténtelo de nuevo."
             End If
