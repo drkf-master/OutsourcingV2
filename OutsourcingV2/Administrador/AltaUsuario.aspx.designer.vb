@@ -167,6 +167,15 @@ Partial Public Class AltaUsuario
 	Protected WithEvents drpColonia As Global.System.Web.UI.WebControls.DropDownList
 
 	'''<summary>
+	'''Control lblColoniaMensaje.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents lblColoniaMensaje As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
 	'''Control lblCalle.
 	'''</summary>
 	'''<remarks>

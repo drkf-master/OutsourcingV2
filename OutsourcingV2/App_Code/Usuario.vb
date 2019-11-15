@@ -28,5 +28,29 @@
 		'DEVUELVO LA CADENA MD5
 		Return sb.ToString
 	End Function
+
+	Public Shared Function LlenaDropdownList(ByVal cmb As DropDownList, ByVal Ds As Data.DataSet) As Boolean
+		Dim i As Integer
+		Try
+			cmb.Items.Clear()
+
+			For i = 0 To Ds.Tables(0).Rows.Count - 1
+				Dim item As New DropDownList()
+
+				item.DataValueField = Ds.Tables(0).Rows(i).Item(0)
+				item.DataTextField = Ds.Tables(0).Rows(i).Item(1)
+				Dim stritem As String = item.Text
+				cmb.Items.Add(stritem)
+				item.DataBind()
+			Next
+			Return True
+
+		Catch ex As Exception
+			Return False
+
+		End Try
+
+
+	End Function
 #End Region
 End Class

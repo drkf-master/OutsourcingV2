@@ -9,8 +9,8 @@
 			<div class="row">
 				<div class="col-xs-12 ">
 					<nav>
-						<div class="nav nav-tabs nav-fill" id="na-vtab" role="tablist">
-							<a class="nav-item nav-link active" id="nav-Buscar-tab" data-toggle="tab" href="#navBuscar" role="tab" aria-controls="nav-home" aria-selected="true">Buscar</a>
+						<div class="nav nav-tabs nav-fill navbar-dark" id="na-vtab" role="tablist">
+							<a class="nav-item nav-link" id="nav-Buscar-tab" data-toggle="tab" href="#navBuscar" role="tab" aria-controls="nav-home" aria-selected="true">Buscar</a>
 							<a class="nav-item nav-link" id="nav-AgregarPersona-tab" data-toggle="tab" href="#navAgregarPersona" role="tab" aria-controls="nav-profile" aria-selected="false">Agregar Persona</a>
 							<a class="nav-item nav-link" id="nav-AgregarUsuario-tab" data-toggle="tab" href="#navAgregarUsuario" role="tab" aria-controls="nav-contact" aria-selected="false">Agregar Usuario</a>
 							<a class="nav-item nav-link" id="nav-Usuarios-tab" data-toggle="tab" href="#navUsuarios" role="tab" aria-controls="nav-about" aria-selected="false">Usuarios*</a>
@@ -76,6 +76,7 @@
 											<asp:Label ID="lblColonia" runat="server" Text="Colonia"></asp:Label>
 											<asp:DropDownList ID="drpColonia" runat="server"></asp:DropDownList>
 											<br />
+											<asp:Label ID="lblColoniaMensaje" runat="server" Text="Label"></asp:Label>
 										</div>
 										<div class="row">
 											<asp:Label ID="lblCalle" runat="server" Text="Calle:"></asp:Label>
@@ -135,7 +136,7 @@
 
 						<div class="tab-pane fade" id="navUsuarios" role="tabpanel" aria-labelledby="nav-about-tab">
 							<div class="label text-info">Usuarios del Sistema</div>
-							<asp:GridView ID="grdUsuariosSistema" runat="server" Class="table "> </asp:GridView>
+							<asp:GridView ID="grdUsuariosSistema" runat="server" Class="table-responsive table-striped table-bordered-primary table-hover " BorderStyle="Outset" scrollbar="true"> </asp:GridView>
 						</div>
 					</div>
 				</div>

@@ -3,7 +3,8 @@
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		llenaGridUsuarios()
-
+		LlenaListaAdscripcion()
+		LlenaListaPerfiles()
 	End Sub
 
 	Protected Sub btnBuscarPersona_Click(sender As Object, e As EventArgs) Handles btnBuscarPersona.Click
@@ -62,14 +63,15 @@
 
 	Protected Sub LlenaListaAdscripcion()
 		Dim objOutsourcing As New WSOutsourcing.OutsourcingSoapClient
+		Dim objUsuario As New Usuario
 		Dim DSConsulta As Data.DataSet = objOutsourcing.consultaAdscripcion()
 		'objOutsourcing.ValidarUsuario()
 		Try
 			If DSConsulta.Tables(0).Rows.Count > 0 Then
 				Dim myDataSet = DSConsulta
-				drpListAdscripcion.DataSource = myDataSet
-				drpListAdscripcion.DataBind()
-				'Comunes.LlenaRadComboCatalogo(Me.rcmbAdscripcion, DSConsulta)
+				'drpListAdscripcion.DataSource = DSConsulta.Tables(2).Rows.Count
+				'drpListAdscripcion.DataBind()
+				Usuario.LlenaDropdownList(drpListAdscripcion, DSConsulta)
 			End If
 			DSConsulta = Nothing
 		Catch ex As Exception
@@ -77,7 +79,19 @@
 		End Try
 	End Sub
 
-
+	Protected Sub LlenaListaPerfiles()
+		Dim objOutsourcing As New WSOutsourcing.OutsourcingSoapClient
+		Dim objUsuario As New Usuario
+		Dim DSConsulta As Data.DataSet = objOutsourcing.consultaPerfiles()
+		Try
+			If DSConsulta.Tables(0).Rows.Count > 0 Then
+				Usuario.LlenaDropdownList(drpListTipoPerfil, DSConsulta)
+			End If
+			DSConsulta = Nothing
+		Catch ex As Exception
+			lblBuscarPersonaMensaje.Text = "Error el cargar los perfiles."
+		End Try
+	End Sub
 
 	Protected Function BuscarUsuario() As Boolean
 		'Dim objLogin As New Login
@@ -171,6 +185,42 @@
 		btnAltaUsuario.Text = "Generar Usuario"
 		txtCP.Enabled = True
 		txtUsuario.Enabled = True
+	End Sub
+
+	Protected Sub btnCancelarUsuarioAlta_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCancelarAltaUsuario.Click
+		LimpiarFormularioAltaUsuario()
+		MostrarControlesUsuario(False)
+	End Sub
+
+	Protected Sub btnBuscarColonia_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnBuscarColonia.Click
+		Dim objOutsourcing As New WSOutsourcing.OutsourcingSoapClient
+		Dim DSConsulta As Data.DataSet
+		lblColoniaMensaje.Text = "" 'cambiar etiqueta
+		Try
+			Select Case btnBuscarColonia.Text
+				Case "Buscar Colonia"
+					Dim strCodigoPostal = txtCP.Text
+					DSConsulta = objOutsourcing.consultarColonia(strCodigoPostal)
+					If DSConsulta.Tables(0).Rows.Count > 0 Then
+						'Comunes.LlenaRadComboCatalogo(Me.rcmbColonia, DSConsulta) 'aqui debe llenar el combo del CodigoPostal
+						btnBuscarColonia.Text = "Nueva búsqueda"
+						txtCP.Enabled = False
+					Else
+						lblColoniaMensaje.Text = "No existe la colonia, puedes borrar el código postal y continuar con la inserción de la persona."
+						txtCP.Enabled = True
+						drpColonia.Items.Clear()
+						drpColonia.Text = ""
+					End If
+					DSConsulta = Nothing
+				Case "Nueva búsqueda"
+					drpColonia.Items.Clear()
+					drpColonia.Text = ""
+					btnBuscarColonia.Text = "Buscar Colonia"
+					txtCP.Enabled = True
+			End Select
+		Catch ex As Exception
+			lblColoniaMensaje.Text = "Error al cargar la colonia."
+		End Try
 	End Sub
 End Class
 
