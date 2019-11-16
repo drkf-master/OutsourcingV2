@@ -2,9 +2,26 @@
 	Inherits System.Web.UI.Page
 
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-		llenaGridUsuarios()
-		LlenaListaAdscripcion()
-		LlenaListaPerfiles()
+		If Not IsPostBack Then
+			If Session("DatosUsuario") Is Nothing Then
+				Session("url") = Nothing
+				Response.Redirect("LoginGeneral.aspx")
+			End If
+			If Session("url") Is Nothing Then
+				Response.Redirect("LoginGeneral.aspx")
+			End If
+			llenaGridUsuarios()
+			LlenaListaAdscripcion()
+			LlenaListaPerfiles()
+			MostrarControlesUsuario(False)
+		Else
+			lblBuscarPersonaMensaje.Text = ""
+			lblBuscarPersonaMensaje.Text = ""
+		End If
+		If Session("datosUsuario") Is Nothing Then
+			Session("url") = Nothing
+			Response.Redirect("LoginGeneral.aspx")
+		End If
 	End Sub
 
 	Protected Sub btnBuscarPersona_Click(sender As Object, e As EventArgs) Handles btnBuscarPersona.Click
@@ -68,10 +85,26 @@
 		'objOutsourcing.ValidarUsuario()
 		Try
 			If DSConsulta.Tables(0).Rows.Count > 0 Then
-				Dim myDataSet = DSConsulta
 				'drpListAdscripcion.DataSource = DSConsulta.Tables(2).Rows.Count
 				'drpListAdscripcion.DataBind()
-				Usuario.LlenaDropdownList(drpListAdscripcion, DSConsulta)
+				'Usuario.LlenaDropdownList(drpListAdscripcion, DSConsulta)
+				Dim i As Integer
+				Try
+					drpListAdscripcion.Items.Clear()
+
+					For i = 0 To DSConsulta.Tables(0).Rows.Count - 1
+						Dim item As New DropDownList()
+
+						item.DataValueField = DSConsulta.Tables(0).Rows(i).Item(2)
+						item.DataTextField = DSConsulta.Tables(0).Rows(i).Item(6)
+						Dim stritem As String = item.DataTextField
+						drpListAdscripcion.Items.Add(stritem)
+						item.DataBind()
+					Next
+
+
+				Catch ex As Exception
+				End Try
 			End If
 			DSConsulta = Nothing
 		Catch ex As Exception
@@ -221,6 +254,91 @@
 		Catch ex As Exception
 			lblColoniaMensaje.Text = "Error al cargar la colonia."
 		End Try
+	End Sub
+
+	Private Sub btnAltaUsuario_Click(sender As Object, e As EventArgs) Handles btnAltaUsuario.Click
+		Dim objOutsourcing As New WSOutsourcing.OutsourcingSoapClient
+		Dim objUsuarioSistema As New Usuario
+		Dim strIdUsuario As String 'Resultado de la consulta
+		Dim strIdPersona As String
+		'Dim encripta As New MD5
+		lblBuscarPersonaMensaje.Text = "" 'usuario
+		If drpListAdscripcion.SelectedIndex < 0 Then
+			lblBuscarPersonaMensaje.Text = "Seleccione una adscripción."
+			drpListAdscripcion.Text = ""
+			Exit Sub
+		End If
+		If drpListTipoPerfil.SelectedIndex < 0 Then
+			lblBuscarPersonaMensaje.Text = "Seleccione un Pefil."
+			drpListTipoPerfil.Text = ""
+			Exit Sub
+		End If
+
+		Try
+			strIdUsuario = ViewState("IdUsuario")
+			Dim strUsuario As String = txtUsuario.Text
+			Dim strPassword As String = objUsuarioSistema.CalculaMD5(txtPassword.Text)
+			Dim intIdPerfil As String = drpListTipoPerfil.SelectedValue '
+			Dim intIdAdscripcion = drpListAdscripcion.SelectedValue '
+			Select Case btnAltaUsuario.Text
+				Case "Generar Usuario"
+					strIdPersona = ViewState("IdPersona")
+					If IsNumeric(strIdPersona) Then
+						Dim strConsultaUsuario As String = objOutsourcing.ConsultaNombreUsuario(strIdPersona)
+						Select Case strConsultaUsuario
+							Case "1"
+								lblBuscarPersonaMensaje.Text = "El nombre de Usuario ya existe, cambielo e inténtelo de nuevo."
+								Exit Sub
+							Case "0"
+							Case "-1"
+								lblBuscarPersonaMensaje.Text = "Ocurrió un error en la consulta de Usuario Disponible, puede ser la conexión, intentelo de nuevo."
+								Exit Sub
+							Case Else
+								lblBuscarPersonaMensaje.Text = "El procedimiento de Consulta Usuario Disponible regresa un valor no válido."
+								Exit Sub
+						End Select
+					Else
+						lblBuscarPersonaMensaje.Text = "La persona no tiene un Identificador válido. Busque de nuevo a la persona y vuelva a intentarlo."
+						Exit Sub
+					End If
+					strIdUsuario = objOutsourcing.insertaUsuario(strIdPersona, strUsuario, strPassword, intIdPerfil, intIdAdscripcion)
+
+				Case "Actualizar Usuario"
+					If IsNumeric(strIdUsuario) Then
+						strIdUsuario = strIdUsuario
+					Else
+						lblBuscarPersonaMensaje.Text = "El Identificador del usuario no es válido, intente de nuevo."
+						Exit Sub
+					End If
+					strIdUsuario = objOutsourcing.ActualizarUsuario(strIdUsuario, strUsuario, strPassword, intIdPerfil, intIdAdscripcion)
+
+				Case "Dar de alta"
+					If IsNumeric(strIdUsuario) Then
+
+					Else
+						lblBuscarPersonaMensaje.Text = "El Identificador del usuario no es válido, intente de nuevo."
+						Exit Sub
+					End If
+					strIdUsuario = objOutsourcing.insertaUsuarioAplicacion(strIdUsuario, strPassword, intIdPerfil, intIdAdscripcion)
+			End Select
+
+			If IsNumeric(strIdUsuario) Then
+				If strIdUsuario > 0 Then
+					llenaGridUsuarios()
+					LimpiarFormularioAltaUsuario()
+					lblBuscarPersonaMensaje.Text = "La operación fue éxitosa."
+					MostrarControlesUsuario(False)
+				Else
+					lblBuscarPersonaMensaje.Text = "Ocurrio un error en la inserción de usuario, inténtelo de nuevo."
+				End If
+			Else
+				lblBuscarPersonaMensaje.Text = strIdUsuario
+				MostrarControlesUsuario(True)
+			End If
+		Catch ex As Exception
+			lblBuscarPersonaMensaje.Text = ex.ToString
+		End Try
+
 	End Sub
 End Class
 

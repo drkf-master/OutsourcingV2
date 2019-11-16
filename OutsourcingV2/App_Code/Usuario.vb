@@ -39,7 +39,7 @@
 
 				item.DataValueField = Ds.Tables(0).Rows(i).Item(0)
 				item.DataTextField = Ds.Tables(0).Rows(i).Item(1)
-				Dim stritem As String = item.Text
+				Dim stritem As String = item.DataTextField
 				cmb.Items.Add(stritem)
 				item.DataBind()
 			Next

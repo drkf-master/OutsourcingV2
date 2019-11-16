@@ -119,7 +119,7 @@
 							<asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
 							<asp:TextBox ID="txtPassword" runat="server"></asp:TextBox><br />
 							<br />
-							<asp:Label ID="lblConfirmPassword" runat="server" Text="Label"></asp:Label>
+							<asp:Label ID="lblConfirmPassword" runat="server" Text="Confirmar Contraseña"></asp:Label>
 							<asp:TextBox ID="txtConfirmPassword" runat="server"></asp:TextBox><br />
 							<br />
 							<asp:Label ID="lblListTipoPerfil" runat="server" Text="Tipo de Usuario:"></asp:Label>
