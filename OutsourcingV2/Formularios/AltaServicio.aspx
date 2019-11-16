@@ -31,9 +31,9 @@
                                     </asp:DropDownList>
                                 </div>
 
-                                <div align="left">
+                                <div class="left">
                                     <br />
-                                    <asp:Label ID="lblUsuarioObjetivo" runat="server" Text="objetivo del usuario"></asp:Label>
+                                    <asp:Label ID="lblUsuarioObjetivo" runat="server" Text="Usuario Objetivo"></asp:Label>
                                     <br />
                                     <asp:DropDownList ID="dpwUsuarioObjetivo" runat="server">
                                     </asp:DropDownList>
@@ -47,7 +47,7 @@
                         <div class="tab-pane " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <h2>Datos Proyecto</h2>
 
-                            <div align="left">
+                            <div class="left">
 
                                 <asp:Label ID="lblProyecto" runat="server" Text="Nombre"></asp:Label>
                                 <br />
@@ -55,35 +55,35 @@
                                 <br />
                             </div>
 
-                            <div align="left">
+                            <div class="left">
                                 <asp:Label ID="lblDescripcionProyecto" runat="server" Text="Descripción"></asp:Label>
                                 <br />
                                 <asp:TextBox runat="server" Height="100px" Width="350"></asp:TextBox>
                                 <br />
                             </div>
 
-                            <div align="left">
+                            <div class="left">
                                 <asp:Label ID="lblObjetivo" runat="server" Text="Objetivo"></asp:Label>
                                 <br />
                                 <asp:TextBox ID="txtObjetivo" runat="server" Width="350px" Height="80"></asp:TextBox>
                                 <br />
                             </div>
 
-                            <div align="left">
+                            <div class="left">
                                 <asp:Label ID="lblBeneficios" runat="server" Text="Beneficios"></asp:Label>
                                 <br />
                                 <asp:TextBox ID="txtBeneficios" runat="server" Height="80" Width="350"></asp:TextBox>
                                 <br />
                             </div>
 
-                            <div align="left">
+                            <div class="left">
                                 <asp:Label ID="lblTiempo" runat="server" Text="Tiempo de duración"></asp:Label>
                                 <br />
                                 <asp:TextBox ID="txtTiempoProyecto" runat="server" Width="350"></asp:TextBox>
                                 <br />
                             </div>
 
-                            <div align="left">
+                            <div class="left">
                                 <asp:Label ID="lblAdscripcion" runat="server" Text="Adscripción"></asp:Label>
                                 <br />
                                 <asp:TextBox ID="txtAdscripcion" runat="server" Height="50" Width="350"></asp:TextBox>
@@ -94,14 +94,14 @@
                         <div class="tab-pane " id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <h2>Recursos</h2>
 
-                            <div align="left">
+                            <div class="left">
                                 <asp:Label ID="lblRecursosHumanosProyecto" runat="server" Text="Recursos humanos"></asp:Label>
                                 <br />
                                 <asp:TextBox ID="txtRecursosHumanosProyecto" runat="server" Width="350" Height="50"></asp:TextBox>
                                 <br />
                             </div>
 
-                            <div align="left">
+                            <div class="left">
                                 <asp:Label ID="lblInfraestructuraProyecto" runat="server" Text="Adscripción"></asp:Label>
                                 <br />
                                 <asp:TextBox ID="txtInfraesctructraProyecto" runat="server" Height="70" Width="350"></asp:TextBox>
@@ -110,7 +110,7 @@
 
                             <br />
 
-                            <div align="left">
+                            <div class="left">
                                 <asp:Button ID="btnGuardarProyecto" runat="server" Text="Guardar Proyecto" />
                                 <br />
                                 <br />
