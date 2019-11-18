@@ -6,9 +6,12 @@
 		<h1 class="text-info align-text-bottom">Revisión de Proyectos </h1>
 		<asp:GridView ID="DatosProyecto" runat="server">
 			<Columns>
-				 <asp:BoundField DataField="codigo" HeaderText="codigo" InsertVisible="False" ReadOnly="True" SortExpression="codigo" />
-				 <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
-				 <asp:BoundField DataField="apellido" HeaderText="apellido"  SortExpression="apellido" />
+				 <asp:BoundField DataField="Nombre del proyecto" HeaderText="Nombre del proyecto" SortExpression="Nombre del proyecto" />
+				 <asp:BoundField DataField="Usuario" HeaderText="Usuario" SortExpression="nombre" />
+				 <asp:BoundField DataField="id" HeaderText="id"  SortExpression="id" />
+                 <asp:BoundField DataField="Adscripción" HeaderText="Adscripción"  SortExpression="Adscripción" />
+                 <asp:BoundField DataField="Estatus" HeaderText="Estatus"  SortExpression="Estatus" />
+                 <asp:BoundField DataField="Habilitado" HeaderText="Habilitado"  SortExpression="Habilitado" />
 			</Columns>
 		</asp:GridView>
 
