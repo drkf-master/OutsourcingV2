@@ -4,63 +4,79 @@
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maxium-scale=1.0, minium-scale=1.0" />
-    <title>OutsourcingV2</title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maxium-scale=1.0, minium-scale=1.0" />
+	<title>OutsourcingV2</title>
+	<link href="Content/bootstrap.min.css" rel="stylesheet" />
 
-    <script src="Scripts/popper.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
+	<script src="Scripts/popper.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
 
-    <link href="css/CssPrincipal.css" rel="Stylesheet" type="text/css" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+	<link href="css/CssPrincipal.css" rel="Stylesheet" type="text/css" />
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <header>
-            <div id="fondos">
-                <table id="BannerCabecera">
-                    <tr>
-                        <td>
-                            <a href="https://www.unam.mx/">
-                                <asp:Image ID="ImagenUnam" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_unam.png" /></a>
-                        </td>
-                        <td>
-                            <a href="http://www.acatlan.unam.mx/">
-                                <asp:Image ID="ImagenAcatlan" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_fes.png" /></a>
-                        </td>
+	<form id="form1" runat="server">
+		<header>
+			<div id="fondos">
+				<div class="container-fluid" id="BannerCabecera">
+					<div class="row">
+						<div class="col align-content-center justify-content-around">
+							<br />
+							<a href="https://www.unam.mx/">
+								<asp:Image ID="ImagenUnam" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_unam.png" /></a>
+						</div>
+						<div class="col">
 
-                    </tr>
-                </table>
-            </div>
-        </header>
+						</div>
+						<div class="col">
+							<a href="http://www.acatlan.unam.mx/">
+								<asp:Image ID="ImagenAcatlan" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_fes.png" /></a>
+						</div>
 
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-        <footer class="align-content-center ">
-            <div class="align-content-center" id="PiePagina">
-                Hecho en México, todos los derechos reservados 2019. Esta página funciona mejor
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div>
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+			</asp:ContentPlaceHolder>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<footer class="align-content-center position-relative ">
+			<div class="align-content-center " id="PiePagina">
+				Hecho en México, todos los derechos reservados 2019. Esta página funciona mejor
 				usando el navegador <b>Google Chrome</b>
-                <asp:Image ID="ImgNavegador" runat="server" ImageUrl="~/Imagenes/MasterPage/img_Google.jpg"
-                    Height="15px" Width="15px" />, puede ser reproducida con fines no lucrativos,
+				<asp:Image ID="ImgNavegador" runat="server" ImageUrl="~/Imagenes/MasterPage/img_Google.jpg"
+					Height="15px" Width="15px" />, puede ser reproducida con fines no lucrativos,
 				siempre y cuando no se mutile, se cite la fuente completa y su dirección electrónica.
 				De otra forma, requiere permiso previo por escrito de la institución.
 					Sitio web administrado por:
 					<br />
-                Departamento de Sistemas de Información, FES ACATLÁN.  
-            </div>
-        </footer>
-    </form>
+				Departamento de Sistemas de Información, FES ACATLÁN.  
+			</div>
+		</footer>
+	</form>
 
-    <script src="Scripts/jquery-3.0.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
+	<script src="Scripts/jquery-3.0.0.min.js"></script>
+	<script src="Scripts/bootstrap.min.js"></script>
 </body>
 </html>

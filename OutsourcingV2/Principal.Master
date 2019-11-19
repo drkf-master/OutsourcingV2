@@ -24,24 +24,26 @@
 <body>
     <form id="form1" runat="server">
         <header>
-            <div id="fondos">
-                <table id="BannerCabecera">
-                    <tr>
-                        <td>
-                            <a href="https://www.unam.mx/">
-                                <asp:Image ID="ImagenUnam" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_unam.png" /></a>
-                        </td>
-                        <td>LogoOutsourcing
+			<div id="fondos">
+				<div class="container-fluid" id="BannerCabecera">
+					<div class="row">
+						<div class="col align-content-center justify-content-around">
+							<br />
+							<a href="https://www.unam.mx/">
+								<asp:Image ID="ImagenUnam" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_unam.png" /></a>
+						</div>
+						<div class="col">
+							LogoOutsourcing
+						</div>
+						<div class="col">
+							<a href="http://www.acatlan.unam.mx/">
+								<asp:Image ID="ImagenAcatlan" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_fes.png" /></a>
+						</div>
 
-                        </td>
-                        <td>
-                            <a href="http://www.acatlan.unam.mx/">
-                                <asp:Image ID="ImagenAcatlan" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_fes.png" /></a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </header>
+					</div>
+				</div>
+			</div>
+		</header>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-gradient-ligth">
             <a class="navbar-brand" href="../Formularios/CatalogoServicos.aspx">Outsourcing</a>
@@ -88,7 +90,19 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <footer class="align-content-center ">
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+        <footer class="align-content-center position-relative ">
             <div class="align-content-center" id="PiePagina">
                 Hecho en México, todos los derechos reservados 2019. Esta página funciona mejor
 				usando el navegador <b>Google Chrome</b>
