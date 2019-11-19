@@ -222,12 +222,12 @@
 			'objProyecto.IdProyecto = strIdProyecto
 
 			dsConsultaProyecto = objOutsourcing.ConsultaDatosProyectoCliente(strIdProyecto)
-			'If dsConsultaProyecto.Tables(0).Rows(0).Item("nombreTipoServicio").ToString() <> "" Then
-			'ContenidoTipoServicio.Text = dsConsultaProyecto.Tables(0).Rows(0).Item("nombreTipoServicio").ToString()
-			'lblContenidoTipoServicio.Visible = True
-			'lblTipoServicio.Visible = True 'clienteTipo
-			'hrContenidoTipoServicio.Visible = True
-			'End If
+			If dsConsultaProyecto.Tables(0).Rows(0).Item("nombreTipoServicio").ToString() <> "" Then
+				lblContenidoTipoServicio.Text = dsConsultaProyecto.Tables(0).Rows(0).Item("nombreTipoServicio").ToString()
+				lblContenidoTipoServicio.Visible = True
+				lblTipoServicio.Visible = True 'clienteTipo
+				hrContenidoTipoServicio.Visible = True
+			End If
 
 			If dsConsultaProyecto.Tables(0).Rows(0).Item("NombreProyecto").ToString() <> "" Then
 				lblNombreProyecto.Text = dsConsultaProyecto.Tables(0).Rows(0).Item("NombreProyecto").ToString()
