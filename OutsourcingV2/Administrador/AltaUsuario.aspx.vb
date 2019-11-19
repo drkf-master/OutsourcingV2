@@ -7,19 +7,17 @@
 				Session("url") = Nothing
 				Response.Redirect("LoginGeneral.aspx")
 			End If
-			If Session("url") Is Nothing Then
-				Response.Redirect("LoginGeneral.aspx")
-			End If
+
 			llenaGridUsuarios()
 			LlenaListaAdscripcion()
 			LlenaListaPerfiles()
-			MostrarControlesUsuario(False)
+			MostrarControlesUsuario(True)
 		Else
 			lblBuscarPersonaMensaje.Text = ""
 			lblBuscarPersonaMensaje.Text = ""
 		End If
 		If Session("datosUsuario") Is Nothing Then
-			Session("url") = Nothing
+			'Session("url") = Nothing
 			Response.Redirect("LoginGeneral.aspx")
 		End If
 	End Sub
@@ -174,7 +172,7 @@
 
 	Protected Sub MostrarControlesUsuario(ByVal bVisible As Boolean)
 		'Datos del Usuario
-		lblUsuario.Text = bVisible
+		lblUsuario.Visible = bVisible
 		txtUsuario.Visible = bVisible
 		lblPassword.Visible = bVisible
 		txtPassword.Visible = bVisible
