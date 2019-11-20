@@ -132,7 +132,6 @@
 			If DSConsulta.Tables(0).Columns.Count > 0 Then
 				If DSConsulta.Tables(0).Rows.Count > 0 Then
 					'Comunes.LlenaRadComboSiguienteEstatus(Me.rcmbUsuarioMeta, DSConsulta, "Todos")
-
 					Dim i As Integer
 					Try
 						dpwUsuarioObjetivo.Items.Clear()

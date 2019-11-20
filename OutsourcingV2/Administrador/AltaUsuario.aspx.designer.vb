@@ -248,22 +248,31 @@ Partial Public Class AltaUsuario
 	Protected WithEvents txtCelular As Global.System.Web.UI.WebControls.TextBox
 
 	'''<summary>
-	'''Control btnAgregar.
+	'''Control btnAgregarPersona.
 	'''</summary>
 	'''<remarks>
 	'''Campo generado automáticamente.
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
-	Protected WithEvents btnAgregar As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents btnAgregarPersona As Global.System.Web.UI.WebControls.Button
 
 	'''<summary>
-	'''Control btnCancelar.
+	'''Control btnCancelarPersona.
 	'''</summary>
 	'''<remarks>
 	'''Campo generado automáticamente.
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
-	Protected WithEvents btnCancelar As Global.System.Web.UI.WebControls.Button
+	Protected WithEvents btnCancelarPersona As Global.System.Web.UI.WebControls.Button
+
+	'''<summary>
+	'''Control lblPersonaMensaje.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents lblPersonaMensaje As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
 	'''Control lblUsuario.

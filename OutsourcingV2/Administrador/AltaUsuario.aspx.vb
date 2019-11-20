@@ -4,7 +4,6 @@
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 		If Not IsPostBack Then
 			If Session("DatosUsuario") Is Nothing Then
-				Session("url") = Nothing
 				Response.Redirect("LoginGeneral.aspx")
 			End If
 
@@ -17,7 +16,6 @@
 			lblBuscarPersonaMensaje.Text = ""
 		End If
 		If Session("datosUsuario") Is Nothing Then
-			'Session("url") = Nothing
 			Response.Redirect("LoginGeneral.aspx")
 		End If
 	End Sub
@@ -31,8 +29,6 @@
 		Dim dsConsulta As Data.DataSet = objOutsourcing.consultaAdscripcion
 		lblBuscarPersonaMensaje.Text = ""
 		ViewState("IdPersona") = ""
-
-		'Me.lblBuscarUsuarioMensaje.Text = ""
 		MostrarControlesUsuario(False)
 		If txtHomoclave.Text <> "" Then
 			strHomoclave = "'" & txtHomoclave.Text & "'"
@@ -80,12 +76,8 @@
 		Dim objOutsourcing As New WSOutsourcing.OutsourcingSoapClient
 		Dim objUsuario As New Usuario
 		Dim DSConsulta As Data.DataSet = objOutsourcing.consultaAdscripcion()
-		'objOutsourcing.ValidarUsuario()
 		Try
 			If DSConsulta.Tables(0).Rows.Count > 0 Then
-				'drpListAdscripcion.DataSource = DSConsulta.Tables(2).Rows.Count
-				'drpListAdscripcion.DataBind()
-				'Usuario.LlenaDropdownList(drpListAdscripcion, DSConsulta)
 				Dim i As Integer
 				Try
 					drpListAdscripcion.Items.Clear()
@@ -116,7 +108,21 @@
 		Dim DSConsulta As Data.DataSet = objOutsourcing.consultaPerfiles()
 		Try
 			If DSConsulta.Tables(0).Rows.Count > 0 Then
-				Usuario.LlenaDropdownList(drpListTipoPerfil, DSConsulta)
+				Dim i As Integer
+				Try
+					drpListTipoPerfil.Items.Clear()
+
+					For i = 0 To DSConsulta.Tables(0).Rows.Count - 1
+						Dim item As New DropDownList()
+
+						item.DataValueField = DSConsulta.Tables(0).Rows(i).Item(0)
+						item.DataTextField = DSConsulta.Tables(0).Rows(i).Item(1)
+						Dim stritem As String = item.DataTextField
+						drpListTipoPerfil.Items.Add(stritem)
+						item.DataBind()
+					Next
+				Catch ex As Exception
+				End Try
 			End If
 			DSConsulta = Nothing
 		Catch ex As Exception
@@ -125,7 +131,7 @@
 	End Sub
 
 	Protected Function BuscarUsuario() As Boolean
-		'Dim objLogin As New Login
+
 		Dim objOutsourcing As New WSOutsourcing.OutsourcingSoapClient
 		Dim intIdPersona As Integer
 		Dim DSBuscaUsuario As Data.DataSet
@@ -138,26 +144,24 @@
 				If DSBuscaUsuario.Tables(0).Rows(0).Item(2) = True Then
 					lblBuscarPersonaMensaje.Text = "La persona ya tiene un usuario en el sistema. Su usuario es: '" & DSBuscaUsuario.Tables(0).Rows(0).Item(1) & "'"
 					lblBuscarPersonaMensaje.Visible = True
-					'navBuscar.Attributes["class"] = False
-
 
 				Else
 					lblBuscarPersonaMensaje.Text = "La persona ya tiene un usuario creado en otro sistema. Complete los demás campos para darlo de alta en este sistema."
 					lblBuscarPersonaMensaje.Visible = True
 					ViewState("IdUsuario") = DSBuscaUsuario.Tables(0).Rows(0).Item(0)
-					'MostrarControlesUsuario(True)
+					MostrarControlesUsuario(True)
 					txtUsuario.Text = DSBuscaUsuario.Tables(0).Rows(0).Item(1)
 					txtUsuario.Enabled = False
-					' Me.btnBuscarUsuario.Visible = False
+					'Me.btnBuscarUsuario.Visible = False
 					btnAltaUsuario.Visible = True
 					btnCancelarAltaUsuario.Visible = True
 					btnAltaUsuario.Text = "Dar de alta"
 				End If
 			ElseIf DSBuscaUsuario.Tables(0).Rows.Count > 0 And DSBuscaUsuario.Tables(0).Rows(0).Item(0).ToString <> "" Then
 				lblBuscarPersonaMensaje.Text = "La persona no tiene nungún usuario creado. Agréguelo por favor."
-				'MostrarControlesUsuario(True)
+				MostrarControlesUsuario(True)
 				lblBuscarPersonaMensaje.Visible = True
-				' Me.btnBuscarUsuario.Visible = False
+				'Me.btnBuscarUsuario.Visible = False
 				btnAltaUsuario.Visible = True
 				btnCancelarAltaUsuario.Visible = True
 			Else
@@ -203,9 +207,9 @@
 		txtUsuario.Text = ""
 		txtPassword.Text = ""
 		txtConfirmPassword.Text = ""
-		drpListTipoPerfil.Text = ""
+		'drpListTipoPerfil.Text = ""
 		drpListTipoPerfil.SelectedIndex = -1
-		drpListAdscripcion.Text = ""
+		'drpListAdscripcion.Text = ""
 		drpListAdscripcion.SelectedIndex = -1
 		drpListTipoPerfil.Enabled = True
 		drpListAdscripcion.Enabled = True
@@ -276,8 +280,8 @@
 			strIdUsuario = ViewState("IdUsuario")
 			Dim strUsuario As String = txtUsuario.Text
 			Dim strPassword As String = objUsuarioSistema.CalculaMD5(txtPassword.Text)
-			Dim intIdPerfil As String = drpListTipoPerfil.SelectedValue '
-			Dim intIdAdscripcion = drpListAdscripcion.SelectedValue '
+			Dim intIdPerfil As Integer = drpListTipoPerfil.SelectedIndex + 1 '
+			Dim intIdAdscripcion As Integer = drpListAdscripcion.SelectedIndex '
 			Select Case btnAltaUsuario.Text
 				Case "Generar Usuario"
 					strIdPersona = ViewState("IdPersona")
@@ -337,6 +341,86 @@
 			lblBuscarPersonaMensaje.Text = ex.ToString
 		End Try
 
+	End Sub
+
+	Private Sub btnAgregarPersona_Click(sender As Object, e As EventArgs) Handles btnAgregarPersona.Click
+		Dim objOutsourcing As New WSOutsourcing.OutsourcingSoapClient
+		Dim strIdPersona As String 'Resultado de la consulta
+		Dim strRFC As String
+		Dim strHomoclave As String = "null"
+		Dim strNombre As String
+		Dim strApePaterno As String
+		Dim strApeMaterno As String = "null"
+		Dim strTelefono As String = "null"
+		Dim strCelular As String = "null"
+		Dim strCorreoElectronico As String = "null"
+		Dim strCalle As String = "null"
+		Dim strCodigoPostal As String = "null"
+		Dim strColonia As String = "null"
+
+		If txtRfc.Text <> "" Then
+			strRFC = "'" & txtRfc.Text & "'"
+		Else
+			lblPersonaMensaje.Text = "El RFC es obligatorio"
+			Exit Sub
+		End If
+		If txtHomoclave.Text <> "" Then
+			strHomoclave = "'" & txtHomoclave.Text & "'"
+		End If
+		If txtNombre.Text <> "" Then
+			strNombre = "'" & txtNombre.Text & "'"
+		Else
+			lblPersonaMensaje.Text = "El Nombre es obligatorio"
+			Exit Sub
+		End If
+		If txtApellidoPaterno.Text <> "" Then
+			strApePaterno = "'" & txtApellidoPaterno.Text & "'"
+		Else
+			lblPersonaMensaje.Text = "El Apellido Paterno es Obligatorio"
+			Exit Sub
+		End If
+		If txtApellidoMaterno.Text <> "" Then
+			strApeMaterno = "'" & txtApellidoMaterno.Text & "'"
+		End If
+		If txtTelefono.Text <> "" Then
+			strTelefono = "'" & txtTelefono.Text & "'"
+		End If
+		If txtCelular.Text <> "" Then
+			strCelular = "'" & txtCelular.Text & "'"
+		End If
+		If txtCorreo.Text <> "" Then
+			strCorreoElectronico = "'" & txtCorreo.Text & "'"
+		Else
+			lblPersonaMensaje.Text = "El Correo es obligatorio."
+			Exit Sub
+		End If
+		If txtCalle.Text <> "" Then
+			strCalle = "'" & txtCalle.Text & "'"
+		End If
+		If drpColonia.SelectedIndex > -1 Then
+			strColonia = "'" & drpColonia.SelectedValue & "'"
+		End If
+		If txtCP.Text <> "" Then
+			If drpColonia.SelectedIndex < 0 Then
+				lblPersonaMensaje.Text = "Seleccione una colonia o borre el codigo postal."
+				Exit Sub
+			End If
+		End If
+
+		strIdPersona = objOutsourcing.insertaPersona(strRFC, strHomoclave, strNombre, strApePaterno, strApeMaterno, strTelefono, strCelular, strCorreoElectronico, strCalle, strColonia)
+
+		If IsNumeric(strIdPersona) Then
+			If strIdPersona > 0 Then
+				lblBuscarPersonaMensaje.Text = "La persona se agregó correctamente. Ingrese sus datos de Usuario."
+				ViewState("IdPersona") = strIdPersona
+				MostrarControlesUsuario(True)
+				LimpiarFormularioAltaUsuario()
+			Else
+				lblPersonaMensaje.Text = "Ocurrió un error en la inserción de la persona, inténtelo de nuevo."
+			End If
+		Else
+			lblPersonaMensaje.Text = strIdPersona
+		End If
 	End Sub
 End Class
 

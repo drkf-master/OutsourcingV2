@@ -11,11 +11,6 @@
 			If llenaListaServicios() Then
 				If llenaListaUsuarioObjetivo() Then
 					llenaListaAdscripcion()
-					'If llenaComboLiderProyecto() Then
-					'llenaRgridProyecto()
-					'Else
-					'Exit Sub
-					'End If
 				Else
 					Exit Sub
 				End If
@@ -23,10 +18,6 @@
 				Exit Sub
 			End If
 		Else
-			'lblProyectoMensaje.Text = ""
-
-			'modificado
-			'lblPosibleLiderMensaje.Text = ""
 			lblDatosServicioMensaje.Text = ""
 		End If
 		If Session("datosUsuario") Is Nothing Then
