@@ -17,9 +17,10 @@
 }
 
 #BannerCabecera {
-    text-align: center;
-    width: 100%;
-    display: inline-block;
+	height: 60px;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
 }
 
 #PiePagina {

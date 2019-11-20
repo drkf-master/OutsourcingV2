@@ -132,6 +132,9 @@
     <Content Include="Imagenes\franjaunam.gif" />
     <Content Include="Imagenes\MasterPage\fondo_azul.jpg" />
     <Content Include="Imagenes\MasterPage\img_Google.jpg" />
+    <Content Include="Imagenes\MasterPage\LOGOTIPO-DE-OUTSOURCING_1.png" />
+    <Content Include="Imagenes\MasterPage\LOGOTIPO-DE-OUTSOURCING_2.png" />
+    <Content Include="Imagenes\MasterPage\LOGOTIPO-DE-OUTSOURCING_3.png" />
     <Content Include="Imagenes\MasterPage\logo_fes.png" />
     <Content Include="Imagenes\MasterPage\logo_unam.png" />
     <Content Include="Imagenes\Mensaje_Tooltip.png" />

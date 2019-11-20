@@ -32,8 +32,8 @@
 							<a href="https://www.unam.mx/">
 								<asp:Image ID="ImagenUnam" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_unam.png" /></a>
 						</div>
-						<div class="col">
-
+						<div class="col align-content-center justify-content-around">
+							<a ><asp:Image ID="LogoOS" runat="server"   ImageUrl="~/Imagenes/MasterPage/LOGOTIPO-DE-OUTSOURCING_1.png" /></a>
 						</div>
 						<div class="col">
 							<a href="http://www.acatlan.unam.mx/">

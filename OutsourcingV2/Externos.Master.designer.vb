@@ -41,6 +41,15 @@ Partial Public Class Externos
 	Protected WithEvents ImagenUnam As Global.System.Web.UI.WebControls.Image
 
 	'''<summary>
+	'''Control LogoOS.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents LogoOS As Global.System.Web.UI.WebControls.Image
+
+	'''<summary>
 	'''Control ImagenAcatlan.
 	'''</summary>
 	'''<remarks>
