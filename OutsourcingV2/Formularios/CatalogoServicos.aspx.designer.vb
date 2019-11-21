@@ -113,15 +113,6 @@ Partial Public Class CatalogoServicos
 	Protected WithEvents lblTipoServicio As Global.System.Web.UI.WebControls.Label
 
 	'''<summary>
-	'''Control hrContenidoTipoServicio.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents hrContenidoTipoServicio As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-	'''<summary>
 	'''Control lblContenidoTipoServicio.
 	'''</summary>
 	'''<remarks>
@@ -129,6 +120,15 @@ Partial Public Class CatalogoServicos
 	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 	'''</remarks>
 	Protected WithEvents lblContenidoTipoServicio As Global.System.Web.UI.WebControls.Label
+
+	'''<summary>
+	'''Control hrContenidoTipoServicio.
+	'''</summary>
+	'''<remarks>
+	'''Campo generado automáticamente.
+	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+	'''</remarks>
+	Protected WithEvents hrContenidoTipoServicio As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
 	'''<summary>
 	'''Control hrContenidoNombreProyecto.

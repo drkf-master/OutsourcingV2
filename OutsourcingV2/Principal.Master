@@ -33,7 +33,7 @@
 								<asp:Image ID="ImagenUnam" runat="server" ImageUrl="~/Imagenes/MasterPage/logo_unam.png" /></a>
 						</div>
 						<div class="col">
-							LogoOutsourcing
+							<a ><asp:Image ID="LogoOS" runat="server"   ImageUrl="~/Imagenes/MasterPage/LOGOTIPO-DE-OUTSOURCING_1.png" /></a>
 						</div>
 						<div class="col">
 							<a href="http://www.acatlan.unam.mx/">
@@ -71,7 +71,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="../Revisor/RevisarServicios.aspx" tabindex="-1" aria-disabled="true">Revisar Proyectos</a>
+                            <a class="nav-link  " href="../Revisor/RevisarServicios.aspx" tabindex="-1" aria-disabled="true">Revisar Proyectos</a>
                         </li>
 
                     </ul>

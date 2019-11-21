@@ -60,38 +60,33 @@
 							</div>
 							<div class="panel-body">
 								<br />
-								<asp:Label ID="lblNombreProyecto" runat="server" Text="Nombre"></asp:Label>
+								<asp:Label ID="lblNombreProyecto" runat="server" Text=" "></asp:Label>
 								<br />
 								<asp:Label ID="lblTipoServicio" runat="server" Text="TipoServicio"></asp:Label>
 								<br />
-								<hr id="hrContenidoTipoServicio" runat="server" width="350px" />
-								<asp:Label ID="lblContenidoTipoServicio" runat="server" Text="Nombre"></asp:Label>
-								<br />
+								
+								<asp:Label ID="lblContenidoTipoServicio" runat="server" Text="Nombre"></asp:Label><hr id="hrContenidoTipoServicio" runat="server" width="350px" />
+							 
 								<hr id="hrContenidoNombreProyecto" runat="server" width="350px" />
 								<asp:Label ID="lblContenidoNombreProyecto" runat="server" Text="Nombre"></asp:Label>
 								<br />
-								<asp:Label ID="lblDescripcionProyecto" runat="server" Text="Descripción"></asp:Label>
-								<br />
+								<asp:Label ID="lblDescripcionProyecto" runat="server" Text="Descripción"></asp:Label> 
 								<hr id="hrContenidoDescripcionProyecto" runat="server" height="100px" width="350" />
 								<asp:Label ID="lblContenidoDescripcionProyecto" runat="server" Text="Descripción"></asp:Label>
 								<br />
-								<asp:Label ID="lblObjetivo" runat="server" Text="Objetivo"></asp:Label>
-								<br />
+								<asp:Label ID="lblObjetivo" runat="server" Text="Objetivo"></asp:Label> 
 								<hr id="hrContenidoObjetivo" runat="server" width="350px" height="80" />
 								<asp:Label ID="lblContenidoObjetivo" runat="server" Text="Objetivo"></asp:Label>
 
-								<asp:Label ID="lblInfraestructura" runat="server" Text="Infraestructura"></asp:Label>
-								<br />
+								<asp:Label ID="lblInfraestructura" runat="server" Text="Infraestructura"></asp:Label> 
 								<hr id="hrContenidoInfraestructura" runat="server" width="350px" height="80" />
 								<asp:Label ID="lblContenidoInfraestructura" runat="server" Text="Objetivo"></asp:Label>
 								<br />
-								<asp:Label ID="lblProductoFinal" runat="server" Text="Producto Final"></asp:Label>
-								<br />
+								<asp:Label ID="lblProductoFinal" runat="server" Text="Producto Final"></asp:Label> 
 								<hr id="hrContenidoProductoFinal" runat="server" width="350px" height="80" />
 								<asp:Label ID="lblContenidoProductoFinal" runat="server" Text="Producto Final"></asp:Label>
 								<br />
-								<asp:Label ID="lblDuracion" runat="server" Text="Duración"></asp:Label>
-								<br />
+								<asp:Label ID="lblDuracion" runat="server" Text="Duración"></asp:Label> 
 								<hr id="hrContenidoDuracion" runat="server" width="350px" height="40" />
 								<asp:Label ID="lblContenidoDuracion" runat="server" Text="Duración"></asp:Label>
 								<br />
@@ -103,22 +98,20 @@
 								<br />
 							</div>
 							<div class="panel-body">
-								<asp:Label ID="lblLider" runat="server" Text="Lider"></asp:Label>
-								<br />
+								<asp:Label ID="lblLider" runat="server" Text="Lider"></asp:Label> 
 								<hr id="hrContenidoLider" runat="server" width="350px" height="40" />
 								<asp:Label ID="lblContenidoLider" runat="server" Text="Lider"></asp:Label>
 								<br />
-								<asp:Label ID="lblTelefono" runat="server" Text="Teléfono"></asp:Label>
-								<br />
+								<asp:Label ID="lblTelefono" runat="server" Text="Teléfono"></asp:Label> 
 								<hr id="hrContenidoTelefono" runat="server" width="350px" height="40" />
 								<asp:Label ID="lblContenidoTelefono" runat="server" Text="Teléfono"></asp:Label>
 								<br />
-								<asp:Label ID="lblCorreo" runat="server" Text="Correo"></asp:Label>
-								<br />
+								<asp:Label ID="lblCorreo" runat="server" Text="Correo"></asp:Label> 
 								<hr id="hrContenidoCorreo" runat="server" width="350px" height="40" />
 								<asp:Label ID="lblContenidoCorreo" runat="server" Text="Correo"></asp:Label>
 								<br />
-								<asp:Button ID="btnContacto" runat="server" Text="Button" />
+			 
+								<asp:Button ID="btnContacto" runat="server" class="btn-primary" Text= "Solicitar Servicio" />
 
 
 							</div>
