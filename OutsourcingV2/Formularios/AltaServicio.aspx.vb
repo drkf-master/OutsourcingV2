@@ -44,11 +44,11 @@
         Dim strInsertaDatos As String
         Dim TipoServicio As String
         Dim UsuarioObjetivo As String
-        UsuarioObjetivo = CInt(dpwUsuarioObjetivo.Text)
-        TipoServicio = CInt(dpwTipoServicio.Text)
-        'faltan parametros
-        ' strInsertaDatos = objOutsourcing.insertaProyecto("null", TipoServicio, UsuarioObjetivo, txtNombreProyecto.Text, txtDescripcionProyecto.Text, txtObjetivoProyecto.Text, txtInfraesctructraProyecto.Text, txtRecursosHumanosProyecto.Text, txtBeneficiosProyecto.Text,, txtTiempoProyecto.Text,)
-    End Sub
+		UsuarioObjetivo = dpwUsuarioObjetivo.Text
+		'TipoServicio = pwTipoServicio.Text
+		'faltan parametros
+		' strInsertaDatos = objOutsourcing.insertaProyecto("null", TipoServicio, UsuarioObjetivo, txtNombreProyecto.Text, txtDescripcionProyecto.Text, txtObjetivoProyecto.Text, txtInfraesctructraProyecto.Text, txtRecursosHumanosProyecto.Text, txtBeneficiosProyecto.Text,, txtTiempoProyecto.Text,)
+	End Sub
 
 
     Protected Function llenaListaUsuarioObjetivo() As Boolean
